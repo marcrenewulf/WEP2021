@@ -7,16 +7,14 @@
 /** @type {import("../typings/SpineGameObject")} */
 /** @type {import("../typings/SpinePlugin")} */
 
-
-
-
-let game = new Phaser.Game
-
 var config = {
     type: Phaser.AUTO,
-    width: 928,
-    height: 600,
-    scene: [Scene1, Scene2],
+    scale: {
+        parent: 'canvasDiv'
+    },
+    width: 720,
+    height: 460,
+    scene: [Preload, Scene1],
     pixelArt: true,
     physics: {
         default: "arcade",
