@@ -1,0 +1,22 @@
+header nav{
+    padding: 20px;
+}
+
+header h1{
+    text-align: center;
+}
+
+#canvasDiv{
+    margin: auto;
+    width: fit-content;
+}
+
+footer{
+    background-color: lightgrey;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+}
+
