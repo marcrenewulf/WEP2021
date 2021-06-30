@@ -4,7 +4,7 @@ class Preload extends Phaser.Scene {
     }
 
     preload() {
-        this.load.image("platform","./img/platform");
+        this.load.image("platform","./img/platform/platform.png");
     }
 
     create() {
