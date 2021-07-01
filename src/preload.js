@@ -4,7 +4,9 @@ class Preload extends Phaser.Scene {
     }
 
     preload() {
-        this.load.image("platform","./img/platform/platform.png");
+
+        this.load.image("dirt", "./img/platform/DirtTiles16.png");
+        this.load.tilemapTiledJSON("dirtmap","./img/platform/dirtmap.json");
     }
 
     create() {

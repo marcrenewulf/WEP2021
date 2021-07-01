@@ -5,8 +5,10 @@ class Scene1 extends Phaser.Scene {
 
     create() {
         {
-            let platform = this.add.sprite(config.width / 2, config.width / 2, "platform");
-            this.platforms = this.physics.add.staticGroup(platform);
+            const map = this.make.tilemap({key: 'dirtmap'});
+            const tileset = map.addTilesetImage('DirtTiles16','dirt');
+            const platforms = map.createLayer('Platforms', tileset);
+            platforms.setCollisionByProperty({collide: true});
         }
     }
 
