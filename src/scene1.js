@@ -4,7 +4,7 @@ class Scene1 extends Phaser.Scene {
     }
 
     create() {
-        //hintergrund und platformen erstellen
+        //hintergrund
         this.b1 = this.add.tileSprite(0,0, config.width, config.height, "b1");
         this.b1.setOrigin(0, 0);
         this.b2 = this.add.tileSprite(0,0, config.width, config.height, "b2");
@@ -22,19 +22,22 @@ class Scene1 extends Phaser.Scene {
         this.c5 = this.add.tileSprite(0,0, config.width, config.height, "c5");
         this.c5.setOrigin(0, 0);
 
-
-
-
-
-
+        //platformen
         const map = this.make.tilemap({key: 'dirtmap'});
         const tileset = map.addTilesetImage('DirtTiles16','dirt');
         const platforms = map.createLayer('Platforms', tileset);
         platforms.setCollisionByProperty({collide: true});
+
+        //character testweise
+        this.player = this.physics.add.sprite(200,0, "hero");
+        this.physics.add.collider(this.player, platforms);
     }
 
+    //updateloop
     update() {
         this.moveClouds();
+
+        this.player.play("idle", true);
     }
 
     moveClouds(){

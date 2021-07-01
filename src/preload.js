@@ -16,9 +16,16 @@ class Preload extends Phaser.Scene {
 
         this.load.image("dirt", "./img/platform/DirtTiles16.png");
         this.load.tilemapTiledJSON("dirtmap","./img/platform/dirtmap.json");
+
+        //aseprite datein
+        this.load.aseprite("hero","./img/characters/hero/hero.png","./img/characters/hero/hero.json");
     }
 
     create() {
+        //aseprite animationen
+        this.anims.createFromAseprite("hero");
+
+
         this.scene.start("startGame");
     }
 }
