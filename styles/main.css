@@ -8,7 +8,7 @@ header h1{
 
 #canvasDiv{
     margin: auto;
-    width: fit-content;
+    width: min-content;
 }
 
 footer{
