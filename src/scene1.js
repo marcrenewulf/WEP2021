@@ -1,13 +1,15 @@
 class Scene1 extends Phaser.Scene {
+    static LINKS = -1;
+    static RECHTS = 1;
     constructor() {
         super("startGame");
     }
 
     create() {
         //hintergrund
-        this.b1 = this.add.tileSprite(0,0, config.width, config.height, "b1").setOrigin(0, 0);
-        this.b2 = this.add.tileSprite(0,0, config.width, config.height, "b2").setOrigin(0, 0);
-        this.b3 = this.add.tileSprite(0,0, config.width, config.height, "b3").setOrigin(0, 0);
+        this.add.tileSprite(0,0, config.width, config.height, "b1").setOrigin(0, 0);
+        this.add.tileSprite(0,0, config.width, config.height, "b2").setOrigin(0, 0);
+        this.add.tileSprite(0,0, config.width, config.height, "b3").setOrigin(0, 0);
         this.c1 = this.add.tileSprite(0,0, config.width, config.height, "c1").setOrigin(0, 0);
         this.c2 = this.add.tileSprite(0,0, config.width, config.height, "c2").setOrigin(0, 0);
         this.c3 = this.add.tileSprite(0,0, config.width, config.height, "c3").setOrigin(0, 0);
@@ -23,16 +25,22 @@ class Scene1 extends Phaser.Scene {
         const platforms = map.createLayer('Platforms', tileset);
         platforms.setCollisionByProperty({collide: true});
 
-        //character testweise
-        this.player = this.physics.add.sprite(200,0, "hero");
+        //character
+        this.player = new Character(this, 200, 0);
+
+        //collider
         this.physics.add.collider(this.player, platforms);
+
+        //keyboard
+        this.cursors = this.input.keyboard.createCursorKeys();
+        this.jump = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
+        this.action = this.input.keyboard.addKey("Q");
     }
 
     //updateloop
     update() {
         this.moveClouds();
-
-        this.player.play("idle", true);
+        this.playerControl();
     }
 
     moveClouds(){
@@ -44,5 +52,21 @@ class Scene1 extends Phaser.Scene {
         this.c6.tilePositionX -= 0.16;
         this.c7.tilePositionX -= 0.18;
         this.c8.tilePositionX -= 0.09;
+    }
+
+    playerControl(){
+        //movement
+        if (this.cursors.left.isDown) {
+            this.player.move(Scene1.LINKS);
+        } else if (this.cursors.right.isDown) {
+            this.player.move(Scene1.RECHTS);
+        } else {
+            this.player.stopMove();
+        }
+
+        //jump
+        if (Phaser.Input.Keyboard.JustDown(this.jump)) {
+            this.player.jump();
+        }
     }
 }
