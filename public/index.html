@@ -2,41 +2,28 @@
     <head>
         <title>WEP 2021</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <!-- <script defer src="socket.io/socket.io.js"></script>
+        <script defer src="socket.io/socket.io.js"></script>
         <script src="/lib/phaser.js"></script>
         <script src="/src/preload.js"></script>
         <script src="/src/character.js"></script>
         <script src="/src/scene1.js"></script>
-        <script src="/src/main.js"></script> -->
+        <script src="/src/main.js"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="/styles/main.css" />
         <script>
             $(function () {
 
-                /*socket.on('user join', function (msg){
+                socket.on('user join', function (msg){
                     $('#output').append("<span style='color: green;'>Ein neuer Nutzer ist gejoint</span><br />");
-                });*/
+                });
 
-                /*
+                
                 socket.on('user leave', function (msg){
                     $('#output').append("<span style='color: red;'>Ein Nutzer hat die Sitzung verlassen</span><br />");
-                });*/
+                });
             });
         </script>
     </head>
-    <script>
-            // $(function () {
-            //     var socket = io();
-
-            //     socket.on('user join', function (msg){
-            //         $('#output').append("<span style='color: green;'>Ein neuer Nutzer ist gejoint</span><br />");
-            //     });
-
-            //     socket.on('user leave', function (msg){
-            //         $('#output').append("<span style='color: red;'>Ein Nutzer hat die Sitzung verlassen</span><br />");
-            //     });
-            // });
-        </script>
     <body>
         <header>
             <nav>
@@ -70,12 +57,12 @@
                     </div>
             </dialog>
 
-            <!-- <div style="height:100px; width:300px; border: 3px solid black;" id="output">
+            <div style="height:100px; width:300px; border: 3px solid black;" id="output">
                 
             </div>
             <textarea id="message"></textarea>
             <button id="button">senden</button>
-             -->
+
             <!-- <script sry="src/multiplayer.js"></script> -->
 
         </main>
