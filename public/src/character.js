@@ -1,7 +1,6 @@
 class Character extends Phaser.GameObjects.Sprite {
-
-    constructor(scene, x, y) {
-        super(scene, x, y, "hero");
+    constructor(scene, playerInfo) {
+        super(scene, playerInfo.x, playerInfo.y, "hero");
         scene.add.existing(this);
         scene.physics.add.existing(this);
         this.speed = 120;

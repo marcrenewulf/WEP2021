@@ -12,15 +12,15 @@
         <link rel="stylesheet" href="/styles/main.css" />
         <script>
             $(function () {
-                var socket = io();
 
-                socket.on('user join', function (msg){
+                /*socket.on('user join', function (msg){
                     $('#output').append("<span style='color: green;'>Ein neuer Nutzer ist gejoint</span><br />");
-                });
+                });*/
 
+                /*
                 socket.on('user leave', function (msg){
                     $('#output').append("<span style='color: red;'>Ein Nutzer hat die Sitzung verlassen</span><br />");
-                });
+                });*/
             });
         </script>
     </head>
@@ -36,14 +36,6 @@
         </header>
         <main>
             <div id="canvasDiv"></div>
-            
-            <div style="height:100px; width:300px; border: 3px solid black;" id="output">
-                
-            </div>
-            <textarea id="message"></textarea>
-            <button id="button">senden</button>
-            
-            <script sry="src/multiplayer.js"></script>
 
         </main>
         <footer>
