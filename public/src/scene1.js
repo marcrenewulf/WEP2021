@@ -22,25 +22,99 @@ class Scene1 extends Phaser.Scene {
         //platformen
         const map = this.make.tilemap({key: 'dirtmap'});
         const tileset = map.addTilesetImage('DirtTiles16','dirt');
-        const platforms = map.createLayer('Platforms', tileset);
-        platforms.setCollisionByProperty({collide: true});
+        this.platforms = map.createLayer('Platforms', tileset);
+        this.platforms.setCollisionByProperty({collide: true});
 
-        //character
-        this.player = new Character(this, 200, 0);
 
-        //collider
-        this.physics.add.collider(this.player, platforms);
+        this.socket = io();
+
+
+        this.socket.on('currentPlayers', function (players) {
+            console.log("currentPlayers EVENT ausgelöst");
+            Object.keys(players).forEach(function (id) {
+                console.log("playerID: " + players[id].playerId + " | socketID: " + self.socket.id);
+                if (players[id].playerId === self.socket.id) {
+                    console.log("player erstellung");
+                    // addPlayer(self, players[id]);
+                    self.player = new Character(self, players[id]);
+                    self.physics.add.collider(self.player, self.platforms);
+                }else{
+                    self.addOtherPlayers(self, players[id]);
+                }
+            });
+        });
+
+
+        this.socket.on('newPlayer', function (playerInfo) {
+            self.addOtherPlayers(self, playerInfo);
+        });
+
+        this.otherPlayers = this.physics.add.group();
+
+
+
+        this.socket.on('playerMoved', function (playerInfo) {
+            self.otherPlayers.getChildren().forEach(function (otherPlayer) {
+                if (playerInfo.playerId === otherPlayer.playerId) {
+                    otherPlayer.setPosition(playerInfo.x, playerInfo.y);
+                }
+            });
+        });
+
+
+
+        this.socket.on('disconnected', function (playerId) {
+            self.otherPlayers.getChildren().forEach(function (otherPlayer) {
+                if (playerId === otherPlayer.playerId) {
+                    otherPlayer.destroy();
+                }
+            });
+        });
+        
+        // //character
+        // this.player = new Character(this, 200, 0);
+        
+        
+        
+        // //collider
+        // this.physics.add.collider(this.player, platforms);
+
+
+        
 
         //keyboard
         this.cursors = this.input.keyboard.createCursorKeys();
         this.jump = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
         this.action = this.input.keyboard.addKey("Q");
+
+        var self = this;
     }
 
     //updateloop
     update() {
         this.moveClouds();
-        this.playerControl();
+        
+        if(this.player){
+            this.playerControl();
+
+
+            var x = this.player.x;
+            var y = this.player.y;
+            var r = this.player.rotation;
+
+            if (this.player.oldPosition && (x !== this.player.oldPosition.x || y !== this.player.oldPosition.y || r !== this.player.oldPosition.rotation)) {
+                this.socket.emit('playerMovement', { x: this.player.x, y: this.player.y, rotation: this.player.rotation });
+            }
+
+            this.player.oldPosition = {
+                x: this.player.x,
+                y: this.player.y
+              };
+              
+        }else{
+            console.log("player doesnt exists");
+        }
+        
     }
 
     moveClouds(){
@@ -69,4 +143,13 @@ class Scene1 extends Phaser.Scene {
             this.player.jump();
         }
     }
+
+    addOtherPlayers(self, playerInfo) {
+        console.log("addOtherPlayer()");
+        const otherPlayer = self.add.sprite(playerInfo.x, playerInfo.y, 'hero');
+        otherPlayer.playerId = playerInfo.playerId;
+        self.physics.add.collider(otherPlayer, self.platforms);
+        self.otherPlayers.add(otherPlayer);
+
+      }
 }
