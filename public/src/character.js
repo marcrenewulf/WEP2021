@@ -43,12 +43,9 @@ class Character extends Phaser.GameObjects.Sprite {
 
     jump() {
         if (this.jumpsLeft > 0) {
-            console.log("sprünge vorher: "+ this.jumpsLeft);
             this.jumpsLeft--;
-            console.log("sprünge nachher: "+ this.jumpsLeft);
             this.body.setVelocityY(-this.jumpHight);
             this.play("jump" + this.jumpsLeft, true);
-            console.log("nach animation: " + this.jumpsLeft);
         }
     }
 
@@ -64,7 +61,6 @@ class Character extends Phaser.GameObjects.Sprite {
 
     refresh() {
         if (this.body.onFloor()) {
-            console.log(this.body.onFloor());
             this.jumpsLeft = this.jumpsMax;
         }
     }
