@@ -129,6 +129,7 @@ class Scene1 extends Phaser.Scene {
     addOtherPlayers(self, playerInfo) {
         const otherPlayer = self.add.sprite(playerInfo.x, playerInfo.y, 'hero');
         otherPlayer.playerId = playerInfo.playerId;
+        otherPlayer.body.allowGravity = false;
         self.physics.add.collider(otherPlayer, self.platforms);
         self.otherPlayers.add(otherPlayer);
     }
