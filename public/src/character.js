@@ -1,8 +1,11 @@
 class Character extends Phaser.GameObjects.Sprite {
-    constructor(scene, playerInfo) {
-        super(scene, playerInfo.x, playerInfo.y, "hero");
+    constructor(scene, playerInfo, sprite) {
+        super(scene, playerInfo.x, playerInfo.y, sprite = "hero");
         scene.add.existing(this);
         scene.physics.add.existing(this);
+        this.body
+            .setSize(this.frame.width, this.frame.height, false)
+            .setOffset(0.5, 1);
         this.direction = 1;
         this.speed = 120;
         this.jumpHight = 250;
