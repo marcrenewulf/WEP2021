@@ -34,9 +34,6 @@ class Scene1 extends Phaser.Scene {
         this.jump = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
         this.action = this.input.keyboard.addKey("Q");
 
-        //Eventhandler für Spieler beitritt
-        
-
         //Aktuelle Spieler und sich selbst hinzufügen
         socket.on('currentPlayers', function (players) {
             console.log("current Player ()");
