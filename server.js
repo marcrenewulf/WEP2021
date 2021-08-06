@@ -13,18 +13,36 @@ app.use(express.static(__dirname + "/public"));
 io.on('connection', function (socket) {
     console.log('a user connected');
 
-    // create a new player and add it to our players object
-    players[socket.id] = {
-        direction: 1,
-        x: Math.floor(Math.random() * 200) + 50,
-        y: Math.floor(Math.random() * 80) + 50,
-        playerId: socket.id
-    };
-    // send the players object to the new player
-    console.log(players);
-    socket.emit('currentPlayers', players);
-    // update all other players of the new player
-    socket.broadcast.emit('newPlayer', players[socket.id]);
+    
+
+
+
+
+    socket.on('loggedIn', function(loginData){
+        console.log('a user logged in');
+        // create a new player and add it to our players object
+
+        console.log(loginData.username);
+
+        players[socket.id] = {
+            direction: 1,
+            x: Math.floor(Math.random() * 200) + 50,
+            y: Math.floor(Math.random() * 80) + 50,
+            playerId: socket.id,
+            username: loginData.username
+        };
+        // send the players object to the new player
+        console.log(players);
+        socket.emit('currentPlayers', players);
+        
+        // update all other players of the new player
+        socket.broadcast.emit('newPlayer', players[socket.id]);
+    });
+
+
+
+
+
 
     socket.on('disconnect', function () {
         console.log('user disconnected');

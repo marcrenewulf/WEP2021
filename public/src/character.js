@@ -5,7 +5,7 @@ class Character extends Phaser.GameObjects.Sprite {
         scene.physics.add.existing(this);
         this.body
             .setSize(this.frame.width, this.frame.height, false)
-            .setOffset(0, 0);
+            .setOffset(18, 8);
         this.direction = 1;
         this.speed = 120;
         this.jumpHight = 250;

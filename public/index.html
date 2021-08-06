@@ -2,6 +2,15 @@
     <head>
         <title>WEP 2021</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="socket.io/socket.io.js"></script>
+        <script>
+            var socket = io();
+        </script>
+        <script src="/lib/phaser.js"></script>
+        <script src="/src/preload.js"></script>
+        <script src="/src/character.js"></script>
+        <script src="/src/scene1.js"></script>
+        <script src="/src/main.js"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="/styles/main.css" />
     </head>
@@ -16,6 +25,10 @@
             <h1>WEP 2021</h1>
         </header>
         <main>
+
+            <div id="canvasDiv"style="display:none;"></div>
+
+
             <dialog id="dialog">
                     <div class="modal-dialog" role="document">
                             <div class="modal-content">
@@ -30,7 +43,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" id="closeLoginButton">Close</button>
-                                <button type="button" onclick="window.location.href='game.html'" class="btn btn-primary" id="doLoginButton">Sign In!</button>
+                                <button type="button" onclick="logIn();" class="btn btn-primary" id="doLoginButton">Sign In!</button>
                             </div>
                         </div>
                     </div>
@@ -50,12 +63,22 @@
         doLoginButton.addEventListener('click', closeDialog);
         closeLoginButton.addEventListener('click', closeDialog);
 
-    function showDialog() {
-        dialog.showModal();
-    }
+        function showDialog() {
+            dialog.showModal();
+        }
 
-    function closeDialog() {
-        dialog.close();
-    }
+        function closeDialog() {
+            dialog.close();
+        }
+
+        function logIn(){
+            //window.location.href='game.html'
+            var canvasDiv = $('#canvasDiv');
+            var username = $('#loginName').val();
+            socket.emit('loggedIn', {username : username});
+            //canvasDiv.show();
+            canvasDiv.show();
+
+        }
     </script>
 </html>

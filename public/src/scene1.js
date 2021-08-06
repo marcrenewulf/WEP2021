@@ -35,12 +35,13 @@ class Scene1 extends Phaser.Scene {
         this.action = this.input.keyboard.addKey("Q");
 
         //Eventhandler für Spieler beitritt
-        this.socket = io();
+        
 
         //Aktuelle Spieler und sich selbst hinzufügen
-        this.socket.on('currentPlayers', function (players) {
+        socket.on('currentPlayers', function (players) {
+            console.log("current Player ()");
             Object.keys(players).forEach(function (id) {
-                if (players[id].playerId === self.socket.id) {
+                if (players[id].playerId === socket.id) {
                     self.player = new Character(self, players[id]);
                     self.physics.add.collider(self.player, self.platforms);
                 } else {
@@ -50,12 +51,12 @@ class Scene1 extends Phaser.Scene {
         });
 
         //Neue Speieler hinzufügen
-        this.socket.on('newPlayer', function (playerInfo) {
+        socket.on('newPlayer', function (playerInfo) {
             self.addOtherPlayers(self, playerInfo);
         });
 
         //Andere Spieler bewegen
-        this.socket.on('playerMoved', function (playerInfo) {
+        socket.on('playerMoved', function (playerInfo) {
             self.otherPlayers.getChildren().forEach(function (otherPlayer) {
                 if (playerInfo.playerId === otherPlayer.playerId) {
                     otherPlayer.setPosition(playerInfo.x, playerInfo.y);
@@ -65,7 +66,7 @@ class Scene1 extends Phaser.Scene {
         });
 
         //Animationen von anderen abspielen
-        this.socket.on('playerNewAnimation', function (playerInfo) {
+        socket.on('playerNewAnimation', function (playerInfo) {
             self.otherPlayers.getChildren().forEach(function (otherPlayer) {
                 if (playerInfo.playerId === otherPlayer.playerId) {
                     otherPlayer.play(playerInfo.animation);
@@ -73,7 +74,7 @@ class Scene1 extends Phaser.Scene {
             });
         })
 
-        this.socket.on('disconnected', function (playerId) {
+        socket.on('disconnected', function (playerId) {
             self.otherPlayers.getChildren().forEach(function (otherPlayer) {
                 if (playerId === otherPlayer.playerId) {
                     otherPlayer.destroy();
@@ -140,7 +141,7 @@ class Scene1 extends Phaser.Scene {
         var d = this.player.direction;
 
         if (this.player.oldPosition && (x !== this.player.oldPosition.x || y !== this.player.oldPosition.y || d !== this.player.oldPosition.direction)) {
-            this.socket.emit('playerMovement', {x: this.player.x, y: this.player.y, direction: this.player.direction});
+            socket.emit('playerMovement', {x: this.player.x, y: this.player.y, direction: this.player.direction});
         }
 
         this.player.oldPosition = {
@@ -151,6 +152,6 @@ class Scene1 extends Phaser.Scene {
     }
 
     emitNewPlayerAnimation(anim) {
-        this.socket.emit('playerAnimation', {animation : anim});
+        socket.emit('playerAnimation', {animation : anim});
     }
 }
