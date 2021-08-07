@@ -39,7 +39,7 @@ class Scene1 extends Phaser.Scene {
             console.log("current Player ()");
             Object.keys(players).forEach(function (id) {
                 if (players[id].playerId === socket.id) {
-                    self.player = new Character(self, players[id]);
+                    self.player = new Reaper(self, players[id]);
                     self.physics.add.collider(self.player, self.platforms);
                 } else {
                     self.addOtherPlayers(self, players[id]);
@@ -125,7 +125,7 @@ class Scene1 extends Phaser.Scene {
     }
 
     addOtherPlayers(self, playerInfo) {
-        const otherPlayer = self.add.sprite(playerInfo.x, playerInfo.y, 'hero');
+        const otherPlayer = self.add.sprite(playerInfo.x, playerInfo.y, 'reaper');
         otherPlayer.playerId = playerInfo.playerId;
         self.physics.add.collider(otherPlayer, self.platforms);
         self.otherPlayers.add(otherPlayer);
