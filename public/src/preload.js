@@ -23,7 +23,7 @@ class Preload extends Phaser.Scene {
         //aseprite datein
         this.load.aseprite("reaper","./img/characters/reaper/reaper.png","./img/characters/reaper/reaper.json");
         this.load.aseprite("hero","./img/characters/hero/hero.png","./img/characters/hero/hero.json");
-        this.load.aseprite("redhood","./img/characters/redhood/redhood.png","./img/characters/redhood/redhood.json");
+        //this.load.aseprite("redhood","./img/characters/redhood/redhood.png","./img/characters/redhood/redhood.json");
     }
 
     create() {
@@ -31,7 +31,7 @@ class Preload extends Phaser.Scene {
 
         this.anims.createFromAseprite("reaper");
         this.anims.createFromAseprite("hero");
-        this.anims.createFromAseprite("redhood");
+        //this.anims.createFromAseprite("redhood");
 
 
         this.scene.start("startGame");
