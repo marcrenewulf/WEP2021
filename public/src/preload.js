@@ -21,7 +21,7 @@ class Preload extends Phaser.Scene {
         this.load.tilemapTiledJSON("dirtmap","./img/platform/dirtmap.json");
 
         //aseprite datein
-        this.load.aseprite("reaper","./img/characters/reaper/reaper.png","./img/characters/reaper/reaper.json");
+        this.load.aseprite("reaper","./img/characters/reaper/Reaper.png","./img/characters/reaper/Reaper.json");
         this.load.aseprite("hero","./img/characters/hero/hero.png","./img/characters/hero/hero.json");
         //this.load.aseprite("redhood","./img/characters/redhood/redhood.png","./img/characters/redhood/redhood.json");
     }
