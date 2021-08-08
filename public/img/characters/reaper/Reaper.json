@@ -440,14 +440,14 @@
   "size": { "w": 1434, "h": 47 },
   "scale": "1",
   "frameTags": [
-   { "name": "reaperidle", "from": 0, "to": 3, "direction": "forward" },
-   { "name": "reaperrun", "from": 5, "to": 12, "direction": "forward" },
-   { "name": "reaperjump1", "from": 13, "to": 19, "direction": "forward" },
-   { "name": "reaperjump0", "from": 20, "to": 26, "direction": "forward" },
-   { "name": "reaperfall", "from": 27, "to": 30, "direction": "forward" },
-   { "name": "reaperdash", "from": 31, "to": 36, "direction": "forward" },
-   { "name": "reaperattack1", "from": 37, "to": 42, "direction": "forward" },
-   { "name": "reaperattack2", "from": 43, "to": 47, "direction": "forward" }
+   { "name": "reaper_idle", "from": 0, "to": 3, "direction": "forward" },
+   { "name": "reaper_run", "from": 5, "to": 12, "direction": "forward" },
+   { "name": "reaper_jump1", "from": 13, "to": 19, "direction": "forward" },
+   { "name": "reaper_jump0", "from": 20, "to": 26, "direction": "forward" },
+   { "name": "reaper_fall", "from": 27, "to": 30, "direction": "forward" },
+   { "name": "reaper_dash", "from": 31, "to": 36, "direction": "forward" },
+   { "name": "reaper_attack1", "from": 37, "to": 42, "direction": "forward" },
+   { "name": "reaper_attack2", "from": 43, "to": 47, "direction": "forward" }
   ],
   "slices": [
   ]

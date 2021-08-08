@@ -32,17 +32,18 @@ class Scene1 extends Phaser.Scene {
         //keyboard
         this.cursors = this.input.keyboard.createCursorKeys();
         this.jump = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
-        this.action = this.input.keyboard.addKey("Q");
+        this.attackAbility = this.input.keyboard.addKey("Q");
+        this.movementAbility = this.input.keyboard.addKey("w");
 
         //Aktuelle Spieler und sich selbst hinzufügen
         socket.on('currentPlayers', function (players) {
             console.log("current Player ()");
             Object.keys(players).forEach(function (id) {
                 if (players[id].playerId === socket.id) {
-                    self.player = new Reaper(self, players[id]);
+                    self.player = new Hero(self, players[id]);
                     self.physics.add.collider(self.player, self.platforms);
 
-                    self.player.on("animationstart", function(anim) {
+                    self.player.on("animationstart", function (anim) {
                         self.emitNewPlayerAnimation(anim)
                     });
                 } else {
@@ -92,23 +93,13 @@ class Scene1 extends Phaser.Scene {
 
         //player movement
         if (this.player) {
-            this.player.refresh();
+            this.player.doAction();
             this.playerControl();
             this.emitPlayerMovement();
         }
     }
 
-    moveClouds() {
-        this.c1.tilePositionX -= 0.03;
-        this.c2.tilePositionX -= 0.2;
-        this.c3.tilePositionX -= 0.08;
-        this.c4.tilePositionX -= 0.21;
-        this.c5.tilePositionX -= 0.09;
-        this.c6.tilePositionX -= 0.16;
-        this.c7.tilePositionX -= 0.18;
-        this.c8.tilePositionX -= 0.09;
-    }
-
+    //-----------------eigene Funktionen-------------------
     playerControl() {
         //movement
         if (this.cursors.left.isDown) {
@@ -119,6 +110,16 @@ class Scene1 extends Phaser.Scene {
             this.player.stopMove();
         }
 
+        //attack
+        if (this.input.keyboard.checkDown(this.attackAbility, 650)) {
+            this.player.bufferAction("attack");
+        }
+
+        //dash
+        if (this.input.keyboard.checkDown(this.movementAbility, 650)) {
+            this.player.bufferAction("dash");
+        }
+
         //jump
         if (Phaser.Input.Keyboard.JustDown(this.jump)) {
             this.player.jump();
@@ -126,11 +127,12 @@ class Scene1 extends Phaser.Scene {
     }
 
     addOtherPlayers(self, playerInfo) {
-        const otherPlayer = self.add.sprite(playerInfo.x, playerInfo.y, 'reaper');
+        const otherPlayer = self.add.sprite(playerInfo.x, playerInfo.y, 'hero');
         otherPlayer.playerId = playerInfo.playerId;
         self.physics.add.collider(otherPlayer, self.platforms);
         self.otherPlayers.add(otherPlayer);
         otherPlayer.body.allowGravity = false;
+        otherPlayer.body.setSize(otherPlayer.frame.width, otherPlayer.frame.height);
     }
 
     emitPlayerMovement() {
@@ -148,6 +150,17 @@ class Scene1 extends Phaser.Scene {
     }
 
     emitNewPlayerAnimation(anim) {
-        socket.emit('playerAnimation', {animation : anim});
+        socket.emit('playerAnimation', {animation: anim});
+    }
+
+    moveClouds() {
+        this.c1.tilePositionX -= 0.03;
+        this.c2.tilePositionX -= 0.2;
+        this.c3.tilePositionX -= 0.08;
+        this.c4.tilePositionX -= 0.21;
+        this.c5.tilePositionX -= 0.09;
+        this.c6.tilePositionX -= 0.16;
+        this.c7.tilePositionX -= 0.18;
+        this.c8.tilePositionX -= 0.09;
     }
 }

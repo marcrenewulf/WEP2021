@@ -1,34 +1,34 @@
 class Character extends Phaser.GameObjects.Sprite {
     constructor(scene, playerInfo, sprite) {
-        super(scene, playerInfo.x, playerInfo.y, sprite = "reaper");
+        super(scene, playerInfo.x, playerInfo.y, sprite);
         this.username = playerInfo.username;
         scene.add.text(playerInfo.x, playerInfo.y - 20, this.username, { font: '"Press Start 2P"' });
         scene.add.existing(this);
         scene.physics.add.existing(this);
-        this.body
-            .setSize(this.frame.width, this.frame.height, false)
-            .setOffset(18, 8);
+        this.body.setSize(this.frame.width, this.frame.height);
+        this.normalSize = {
+            x : this.frame.width,
+            y : this.frame.height
+        }
         this.char = sprite;
         this.direction = 1;
         this.speed = 120;
         this.jumpHight = 250;
         this.jumpsMax = 2;
         this.jumpsLeft = 2;
-        this.state = {
-            idlestate : true,
-            attackstate : false
-        }
+        this.actionsBlocked = false;
+
+        this.nextAction = "";
     }
 
     move(direction) {
-        if (!this.state.attackstate){
+        if (!this.actionsBlocked){
             this.setFlipX(-1 === direction);
             this.direction = direction;
         }
-        this.body.setVelocityX(this.speed * direction);
-        if (this.body.onFloor()) {
-            this.play(this.char+"run", true);
-            console.log(this.char+"run");
+        this.body.setVelocityX(this.aktSpeed * direction);
+        if (!this.actionsBlocked && this.body.onFloor()) {
+            this.play(this.char+"_run", true);
         }
     }
 
@@ -36,32 +36,35 @@ class Character extends Phaser.GameObjects.Sprite {
         if (this.body.onFloor()) {
             this.body.setVelocityX(0);
             let currentAnimation = this.anims.getName();
-            if (currentAnimation === this.char + "run" || currentAnimation === this.char + "fall") {
+            if (currentAnimation === this.char + "_run" || currentAnimation === this.char + "_fall") {
                 this.stop();
             }
         }
-        this.playIdle();
     }
 
     jump() {
-        if (this.jumpsLeft > 0) {
+        if (!this.actionsBlocked && this.jumpsLeft > 0) {
             this.jumpsLeft--;
             this.body.setVelocityY(-this.jumpHight);
-            this.play(this.char + "jump" + this.jumpsLeft, true);
+            this.play(this.char + "_jump" + this.jumpsLeft, true);
         }
     }
 
     playIdle() {
         if (!this.anims.isPlaying) {
             if (this.body.onFloor()) {
-               this.play(this.char + "idle", true);
+               this.play(this.char + "_idle", true);
             } else {
-              this.play(this.char + "fall", true);
+              this.play(this.char + "_fall", true);
             }
         }
     }
 
-    refresh() {
+    bufferAction(action) {
+        this.nextAction = action;
+    }
+
+    doAction() {
         if (this.body.onFloor()) {
             this.jumpsLeft = this.jumpsMax;
         }
