@@ -94,13 +94,10 @@
         }
 
         function logIn(){
-            //window.location.href='game.html'
             var canvasDiv = $('#canvasDiv');
             var username = $('#loginName').val();
             socket.emit('loggedIn', {username : username});
-            //canvasDiv.show();
             canvasDiv.show();
-
         }
     </script>
 </html>

@@ -41,6 +41,10 @@ class Scene1 extends Phaser.Scene {
                 if (players[id].playerId === socket.id) {
                     self.player = new Reaper(self, players[id]);
                     self.physics.add.collider(self.player, self.platforms);
+
+                    self.player.on("animationstart", function(anim) {
+                        self.emitNewPlayerAnimation(anim)
+                    });
                 } else {
                     self.addOtherPlayers(self, players[id]);
                 }
@@ -91,10 +95,7 @@ class Scene1 extends Phaser.Scene {
             this.player.refresh();
             this.playerControl();
             this.emitPlayerMovement();
-        } else {
-            console.log("player doesnt exists");
         }
-
     }
 
     moveClouds() {
@@ -134,17 +135,15 @@ class Scene1 extends Phaser.Scene {
 
     emitPlayerMovement() {
         var x = this.player.x;
-        var y = this.player.y;
-        var d = this.player.direction;
+        var y = Math.round(this.player.y);
 
-        if (this.player.oldPosition && (x !== this.player.oldPosition.x || y !== this.player.oldPosition.y || d !== this.player.oldPosition.direction)) {
+        if (this.player.oldPosition && (x !== this.player.oldPosition.x || y !== this.player.oldPosition.y)) {
             socket.emit('playerMovement', {x: this.player.x, y: this.player.y, direction: this.player.direction});
         }
 
         this.player.oldPosition = {
             x: this.player.x,
-            y: this.player.y,
-            direction: this.player.direction
+            y: Math.round(this.player.y)
         };
     }
 

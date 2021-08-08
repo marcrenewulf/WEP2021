@@ -2,6 +2,7 @@ var express = require("express");
 var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
+var port = 8000;
 
 var players = {};
 
@@ -69,6 +70,6 @@ io.on('connection', function (socket) {
 });
 
 
-http.listen(8000, function () {
-    console.log('Servcer gestartet, listening on port 8080');
+http.listen(port, function () {
+    console.log('Server gestartet, er lauscht auf dem Port ' + port);
 });

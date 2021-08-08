@@ -18,11 +18,6 @@ class Character extends Phaser.GameObjects.Sprite {
             idlestate : true,
             attackstate : false
         }
-        this.scene = scene;
-
-        this.on("animationstart", function(anim) {
-            this.scene.emitNewPlayerAnimation(anim)
-        });
     }
 
     move(direction) {
