@@ -1,0 +1,1207 @@
+{ "frames": [
+   {
+    "filename": "red hood itch free 0.aseprite",
+    "frame": { "x": 0, "y": 0, "w": 16, "h": 31 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 97, "y": 66, "w": 16, "h": 31 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 40
+   },
+   {
+    "filename": "red hood itch free 1.aseprite",
+    "frame": { "x": 16, "y": 0, "w": 21, "h": 33 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 94, "y": 64, "w": 21, "h": 33 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 42
+   },
+   {
+    "filename": "red hood itch free 2.aseprite",
+    "frame": { "x": 37, "y": 0, "w": 21, "h": 31 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 94, "y": 63, "w": 21, "h": 31 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 42
+   },
+   {
+    "filename": "red hood itch free 3.aseprite",
+    "frame": { "x": 58, "y": 0, "w": 22, "h": 30 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 94, "y": 61, "w": 22, "h": 30 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 42
+   },
+   {
+    "filename": "red hood itch free 4.aseprite",
+    "frame": { "x": 80, "y": 0, "w": 23, "h": 29 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 93, "y": 60, "w": 23, "h": 29 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 42
+   },
+   {
+    "filename": "red hood itch free 5.aseprite",
+    "frame": { "x": 103, "y": 0, "w": 19, "h": 29 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 95, "y": 62, "w": 19, "h": 29 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 42
+   },
+   {
+    "filename": "red hood itch free 6.aseprite",
+    "frame": { "x": 122, "y": 0, "w": 16, "h": 31 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 97, "y": 65, "w": 16, "h": 31 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 42
+   },
+   {
+    "filename": "red hood itch free 7.aseprite",
+    "frame": { "x": 138, "y": 0, "w": 16, "h": 29 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 96, "y": 68, "w": 16, "h": 29 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 42
+   },
+   {
+    "filename": "red hood itch free 8.aseprite",
+    "frame": { "x": 154, "y": 0, "w": 15, "h": 28 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 97, "y": 69, "w": 15, "h": 28 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 42
+   },
+   {
+    "filename": "red hood itch free 9.aseprite",
+    "frame": { "x": 169, "y": 0, "w": 14, "h": 27 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 97, "y": 70, "w": 14, "h": 27 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 42
+   },
+   {
+    "filename": "red hood itch free 10.aseprite",
+    "frame": { "x": 183, "y": 0, "w": 15, "h": 29 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 97, "y": 68, "w": 15, "h": 29 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 42
+   },
+   {
+    "filename": "red hood itch free 11.aseprite",
+    "frame": { "x": 198, "y": 0, "w": 19, "h": 30 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 94, "y": 67, "w": 19, "h": 30 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 42
+   },
+   {
+    "filename": "red hood itch free 12.aseprite",
+    "frame": { "x": 217, "y": 0, "w": 20, "h": 31 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 92, "y": 66, "w": 20, "h": 31 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 42
+   },
+   {
+    "filename": "red hood itch free 13.aseprite",
+    "frame": { "x": 237, "y": 0, "w": 22, "h": 32 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 91, "y": 64, "w": 22, "h": 32 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 42
+   },
+   {
+    "filename": "red hood itch free 14.aseprite",
+    "frame": { "x": 259, "y": 0, "w": 23, "h": 31 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 91, "y": 63, "w": 23, "h": 31 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 42
+   },
+   {
+    "filename": "red hood itch free 15.aseprite",
+    "frame": { "x": 282, "y": 0, "w": 24, "h": 30 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 91, "y": 61, "w": 24, "h": 30 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 42
+   },
+   {
+    "filename": "red hood itch free 16.aseprite",
+    "frame": { "x": 306, "y": 0, "w": 23, "h": 29 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 92, "y": 60, "w": 23, "h": 29 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 42
+   },
+   {
+    "filename": "red hood itch free 17.aseprite",
+    "frame": { "x": 329, "y": 0, "w": 22, "h": 29 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 93, "y": 62, "w": 22, "h": 29 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 42
+   },
+   {
+    "filename": "red hood itch free 18.aseprite",
+    "frame": { "x": 351, "y": 0, "w": 21, "h": 31 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 92, "y": 64, "w": 21, "h": 31 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 42
+   },
+   {
+    "filename": "red hood itch free 19.aseprite",
+    "frame": { "x": 372, "y": 0, "w": 17, "h": 30 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 94, "y": 67, "w": 17, "h": 30 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 42
+   },
+   {
+    "filename": "red hood itch free 20.aseprite",
+    "frame": { "x": 389, "y": 0, "w": 15, "h": 28 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 95, "y": 69, "w": 15, "h": 28 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 42
+   },
+   {
+    "filename": "red hood itch free 21.aseprite",
+    "frame": { "x": 404, "y": 0, "w": 15, "h": 27 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 95, "y": 70, "w": 15, "h": 27 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 42
+   },
+   {
+    "filename": "red hood itch free 22.aseprite",
+    "frame": { "x": 419, "y": 0, "w": 18, "h": 28 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 94, "y": 69, "w": 18, "h": 28 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 42
+   },
+   {
+    "filename": "red hood itch free 23.aseprite",
+    "frame": { "x": 437, "y": 0, "w": 20, "h": 29 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 93, "y": 68, "w": 20, "h": 29 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 42
+   },
+   {
+    "filename": "red hood itch free 24.aseprite",
+    "frame": { "x": 457, "y": 0, "w": 21, "h": 30 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 92, "y": 67, "w": 21, "h": 30 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 42
+   },
+   {
+    "filename": "red hood itch free 25.aseprite",
+    "frame": { "x": 478, "y": 0, "w": 23, "h": 30 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 87, "y": 67, "w": 23, "h": 30 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 80
+   },
+   {
+    "filename": "red hood itch free 26.aseprite",
+    "frame": { "x": 501, "y": 0, "w": 24, "h": 30 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 89, "y": 67, "w": 24, "h": 30 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 80
+   },
+   {
+    "filename": "red hood itch free 27.aseprite",
+    "frame": { "x": 525, "y": 0, "w": 23, "h": 31 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 91, "y": 66, "w": 23, "h": 31 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 80
+   },
+   {
+    "filename": "red hood itch free 28.aseprite",
+    "frame": { "x": 548, "y": 0, "w": 24, "h": 32 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 93, "y": 65, "w": 24, "h": 32 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 100
+   },
+   {
+    "filename": "red hood itch free 29.aseprite",
+    "frame": { "x": 572, "y": 0, "w": 27, "h": 32 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 93, "y": 65, "w": 27, "h": 32 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 150
+   },
+   {
+    "filename": "red hood itch free 30.aseprite",
+    "frame": { "x": 599, "y": 0, "w": 29, "h": 31 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 90, "y": 66, "w": 29, "h": 31 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 120
+   },
+   {
+    "filename": "red hood itch free 31.aseprite",
+    "frame": { "x": 628, "y": 0, "w": 27, "h": 31 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 89, "y": 66, "w": 27, "h": 31 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 120
+   },
+   {
+    "filename": "red hood itch free 32.aseprite",
+    "frame": { "x": 655, "y": 0, "w": 24, "h": 31 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 91, "y": 66, "w": 24, "h": 31 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 120
+   },
+   {
+    "filename": "red hood itch free 33.aseprite",
+    "frame": { "x": 679, "y": 0, "w": 20, "h": 30 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 91, "y": 67, "w": 20, "h": 30 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 120
+   },
+   {
+    "filename": "red hood itch free 34.aseprite",
+    "frame": { "x": 699, "y": 0, "w": 19, "h": 23 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 95, "y": 74, "w": 19, "h": 23 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 100
+   },
+   {
+    "filename": "red hood itch free 35.aseprite",
+    "frame": { "x": 718, "y": 0, "w": 14, "h": 32 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 98, "y": 63, "w": 14, "h": 32 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 100
+   },
+   {
+    "filename": "red hood itch free 36.aseprite",
+    "frame": { "x": 732, "y": 0, "w": 14, "h": 32 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 98, "y": 63, "w": 14, "h": 32 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 100
+   },
+   {
+    "filename": "red hood itch free 37.aseprite",
+    "frame": { "x": 746, "y": 0, "w": 14, "h": 32 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 98, "y": 63, "w": 14, "h": 32 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 100
+   },
+   {
+    "filename": "red hood itch free 38.aseprite",
+    "frame": { "x": 760, "y": 0, "w": 15, "h": 29 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 98, "y": 64, "w": 15, "h": 29 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 100
+   },
+   {
+    "filename": "red hood itch free 39.aseprite",
+    "frame": { "x": 775, "y": 0, "w": 22, "h": 26 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 94, "y": 67, "w": 22, "h": 26 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 100
+   },
+   {
+    "filename": "red hood itch free 40.aseprite",
+    "frame": { "x": 797, "y": 0, "w": 24, "h": 26 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 93, "y": 67, "w": 24, "h": 26 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 100
+   },
+   {
+    "filename": "41",
+    "frame": { "x": 821, "y": 0, "w": 25, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 92, "y": 68, "w": 25, "h": 25 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 100
+   },
+   {
+    "filename": "42",
+    "frame": { "x": 846, "y": 0, "w": 26, "h": 29 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 91, "y": 65, "w": 26, "h": 29 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 100
+   },
+   {
+    "filename": "43",
+    "frame": { "x": 872, "y": 0, "w": 25, "h": 31 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 92, "y": 64, "w": 25, "h": 31 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 100
+   },
+   {
+    "filename": "44",
+    "frame": { "x": 897, "y": 0, "w": 24, "h": 33 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 92, "y": 63, "w": 24, "h": 33 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 100
+   },
+   {
+    "filename": "45",
+    "frame": { "x": 921, "y": 0, "w": 25, "h": 36 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 92, "y": 61, "w": 25, "h": 36 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 100
+   },
+   {
+    "filename": "46",
+    "frame": { "x": 946, "y": 0, "w": 25, "h": 37 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 92, "y": 60, "w": 25, "h": 37 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 100
+   },
+   {
+    "filename": "red hood itch free 47.aseprite",
+    "frame": { "x": 971, "y": 0, "w": 25, "h": 36 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 92, "y": 61, "w": 25, "h": 36 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 100
+   },
+   {
+    "filename": "red hood itch free 48.aseprite",
+    "frame": { "x": 996, "y": 0, "w": 23, "h": 27 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 94, "y": 70, "w": 23, "h": 27 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 100
+   },
+   {
+    "filename": "red hood itch free 49.aseprite",
+    "frame": { "x": 1019, "y": 0, "w": 19, "h": 22 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 94, "y": 75, "w": 19, "h": 22 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 100
+   },
+   {
+    "filename": "red hood itch free 50.aseprite",
+    "frame": { "x": 1038, "y": 0, "w": 17, "h": 28 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 96, "y": 69, "w": 17, "h": 28 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 100
+   },
+   {
+    "filename": "red hood itch free 51.aseprite",
+    "frame": { "x": 0, "y": 0, "w": 16, "h": 31 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 98, "y": 66, "w": 16, "h": 31 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 100
+   },
+   {
+    "filename": "red hood itch free 52.aseprite",
+    "frame": { "x": 0, "y": 0, "w": 16, "h": 31 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 98, "y": 66, "w": 16, "h": 31 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 100
+   },
+   {
+    "filename": "red hood itch free 53.aseprite",
+    "frame": { "x": 1055, "y": 0, "w": 28, "h": 17 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 95, "y": 80, "w": 28, "h": 17 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 140
+   },
+   {
+    "filename": "red hood itch free 54.aseprite",
+    "frame": { "x": 1083, "y": 0, "w": 29, "h": 17 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 95, "y": 80, "w": 29, "h": 17 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 140
+   },
+   {
+    "filename": "red hood itch free 55.aseprite",
+    "frame": { "x": 1112, "y": 0, "w": 29, "h": 17 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 95, "y": 80, "w": 29, "h": 17 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 140
+   },
+   {
+    "filename": "red hood itch free 56.aseprite",
+    "frame": { "x": 1141, "y": 0, "w": 30, "h": 18 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 95, "y": 79, "w": 30, "h": 18 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 140
+   },
+   {
+    "filename": "red hood itch free 57.aseprite",
+    "frame": { "x": 0, "y": 0, "w": 16, "h": 31 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 102, "y": 66, "w": 16, "h": 31 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 80
+   },
+   {
+    "filename": "red hood itch free 58.aseprite",
+    "frame": { "x": 1171, "y": 0, "w": 23, "h": 28 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 99, "y": 69, "w": 23, "h": 28 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 70
+   },
+   {
+    "filename": "red hood itch free 59.aseprite",
+    "frame": { "x": 1194, "y": 0, "w": 23, "h": 26 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 97, "y": 71, "w": 23, "h": 26 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 70
+   },
+   {
+    "filename": "red hood itch free 60.aseprite",
+    "frame": { "x": 1217, "y": 0, "w": 43, "h": 32 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 77, "y": 65, "w": 43, "h": 32 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 70
+   },
+   {
+    "filename": "red hood itch free 61.aseprite",
+    "frame": { "x": 1260, "y": 0, "w": 41, "h": 31 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 79, "y": 66, "w": 41, "h": 31 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 120
+   },
+   {
+    "filename": "red hood itch free 62.aseprite",
+    "frame": { "x": 1301, "y": 0, "w": 20, "h": 31 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 100, "y": 66, "w": 20, "h": 31 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 120
+   },
+   {
+    "filename": "red hood itch free 63.aseprite",
+    "frame": { "x": 1321, "y": 0, "w": 18, "h": 30 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 99, "y": 67, "w": 18, "h": 30 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 80
+   },
+   {
+    "filename": "red hood itch free 64.aseprite",
+    "frame": { "x": 1339, "y": 0, "w": 20, "h": 31 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 97, "y": 66, "w": 20, "h": 31 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 80
+   },
+   {
+    "filename": "red hood itch free 65.aseprite",
+    "frame": { "x": 1359, "y": 0, "w": 22, "h": 32 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 94, "y": 65, "w": 22, "h": 32 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 70
+   },
+   {
+    "filename": "red hood itch free 66.aseprite",
+    "frame": { "x": 1381, "y": 0, "w": 44, "h": 33 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 64, "w": 44, "h": 33 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 70
+   },
+   {
+    "filename": "red hood itch free 67.aseprite",
+    "frame": { "x": 1425, "y": 0, "w": 44, "h": 28 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 76, "y": 69, "w": 44, "h": 28 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 70
+   },
+   {
+    "filename": "red hood itch free 68.aseprite",
+    "frame": { "x": 1469, "y": 0, "w": 28, "h": 28 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 93, "y": 69, "w": 28, "h": 28 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 120
+   },
+   {
+    "filename": "red hood itch free 69.aseprite",
+    "frame": { "x": 1497, "y": 0, "w": 25, "h": 29 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 95, "y": 68, "w": 25, "h": 29 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 80
+   },
+   {
+    "filename": "red hood itch free 70.aseprite",
+    "frame": { "x": 1522, "y": 0, "w": 19, "h": 29 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 96, "y": 68, "w": 19, "h": 29 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 80
+   },
+   {
+    "filename": "red hood itch free 71.aseprite",
+    "frame": { "x": 1541, "y": 0, "w": 17, "h": 30 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 98, "y": 67, "w": 17, "h": 30 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 72.aseprite",
+    "frame": { "x": 1558, "y": 0, "w": 18, "h": 31 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 96, "y": 66, "w": 18, "h": 31 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 73.aseprite",
+    "frame": { "x": 1576, "y": 0, "w": 42, "h": 34 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 77, "y": 63, "w": 42, "h": 34 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 74.aseprite",
+    "frame": { "x": 1618, "y": 0, "w": 45, "h": 31 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 77, "y": 66, "w": 45, "h": 31 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 75.aseprite",
+    "frame": { "x": 1663, "y": 0, "w": 27, "h": 22 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 96, "y": 75, "w": 27, "h": 22 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 76.aseprite",
+    "frame": { "x": 1690, "y": 0, "w": 27, "h": 22 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 96, "y": 75, "w": 27, "h": 22 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 77.aseprite",
+    "frame": { "x": 1717, "y": 0, "w": 27, "h": 22 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 96, "y": 75, "w": 27, "h": 22 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 78.aseprite",
+    "frame": { "x": 1744, "y": 0, "w": 27, "h": 22 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 96, "y": 75, "w": 27, "h": 22 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 79.aseprite",
+    "frame": { "x": 1771, "y": 0, "w": 18, "h": 24 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 99, "y": 73, "w": 18, "h": 24 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 80.aseprite",
+    "frame": { "x": 1789, "y": 0, "w": 19, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 100, "y": 72, "w": 19, "h": 25 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 81.aseprite",
+    "frame": { "x": 1808, "y": 0, "w": 30, "h": 30 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 104, "y": 67, "w": 30, "h": 30 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 82.aseprite",
+    "frame": { "x": 1838, "y": 0, "w": 36, "h": 27 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 102, "y": 70, "w": 36, "h": 27 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 83.aseprite",
+    "frame": { "x": 1874, "y": 0, "w": 37, "h": 26 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 100, "y": 71, "w": 37, "h": 26 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 84.aseprite",
+    "frame": { "x": 1911, "y": 0, "w": 41, "h": 30 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 98, "y": 67, "w": 41, "h": 30 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 85.aseprite",
+    "frame": { "x": 1952, "y": 0, "w": 55, "h": 36 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 78, "y": 61, "w": 55, "h": 36 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 86.aseprite",
+    "frame": { "x": 2007, "y": 0, "w": 50, "h": 32 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 78, "y": 65, "w": 50, "h": 32 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 87.aseprite",
+    "frame": { "x": 2057, "y": 0, "w": 47, "h": 22 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 83, "y": 75, "w": 47, "h": 22 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 88.aseprite",
+    "frame": { "x": 2104, "y": 0, "w": 31, "h": 22 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 99, "y": 75, "w": 31, "h": 22 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 89.aseprite",
+    "frame": { "x": 2135, "y": 0, "w": 31, "h": 21 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 99, "y": 76, "w": 31, "h": 21 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 90.aseprite",
+    "frame": { "x": 2166, "y": 0, "w": 27, "h": 23 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 100, "y": 74, "w": 27, "h": 23 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 91.aseprite",
+    "frame": { "x": 2193, "y": 0, "w": 31, "h": 26 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 101, "y": 71, "w": 31, "h": 26 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 92.aseprite",
+    "frame": { "x": 2224, "y": 0, "w": 30, "h": 28 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 101, "y": 69, "w": 30, "h": 28 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 93.aseprite",
+    "frame": { "x": 2254, "y": 0, "w": 33, "h": 29 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 101, "y": 68, "w": 33, "h": 29 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 94.aseprite",
+    "frame": { "x": 2287, "y": 0, "w": 37, "h": 30 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 100, "y": 67, "w": 37, "h": 30 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 95.aseprite",
+    "frame": { "x": 2324, "y": 0, "w": 39, "h": 29 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 98, "y": 68, "w": 39, "h": 29 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 96.aseprite",
+    "frame": { "x": 2363, "y": 0, "w": 43, "h": 28 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 97, "y": 69, "w": 43, "h": 28 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 97.aseprite",
+    "frame": { "x": 2406, "y": 0, "w": 23, "h": 37 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 94, "y": 60, "w": 23, "h": 37 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 98.aseprite",
+    "frame": { "x": 2429, "y": 0, "w": 31, "h": 37 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 90, "y": 60, "w": 31, "h": 37 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 99.aseprite",
+    "frame": { "x": 2460, "y": 0, "w": 55, "h": 37 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 70, "y": 60, "w": 55, "h": 37 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 100.aseprite",
+    "frame": { "x": 2515, "y": 0, "w": 54, "h": 31 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 72, "y": 66, "w": 54, "h": 31 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 101.aseprite",
+    "frame": { "x": 2569, "y": 0, "w": 31, "h": 24 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 97, "y": 73, "w": 31, "h": 24 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 102.aseprite",
+    "frame": { "x": 2600, "y": 0, "w": 30, "h": 23 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 98, "y": 74, "w": 30, "h": 23 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 103.aseprite",
+    "frame": { "x": 2630, "y": 0, "w": 30, "h": 23 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 98, "y": 74, "w": 30, "h": 23 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 104.aseprite",
+    "frame": { "x": 2630, "y": 0, "w": 30, "h": 23 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 98, "y": 74, "w": 30, "h": 23 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 105.aseprite",
+    "frame": { "x": 2660, "y": 0, "w": 30, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 98, "y": 72, "w": 30, "h": 25 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 106.aseprite",
+    "frame": { "x": 2690, "y": 0, "w": 33, "h": 27 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 97, "y": 70, "w": 33, "h": 27 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 107.aseprite",
+    "frame": { "x": 2723, "y": 0, "w": 30, "h": 31 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 99, "y": 66, "w": 30, "h": 31 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 108.aseprite",
+    "frame": { "x": 2753, "y": 0, "w": 27, "h": 34 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 98, "y": 63, "w": 27, "h": 34 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 109.aseprite",
+    "frame": { "x": 2780, "y": 0, "w": 23, "h": 35 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 98, "y": 62, "w": 23, "h": 35 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 110.aseprite",
+    "frame": { "x": 2803, "y": 0, "w": 31, "h": 32 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 102, "y": 65, "w": 31, "h": 32 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 111.aseprite",
+    "frame": { "x": 2834, "y": 0, "w": 35, "h": 31 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 103, "y": 66, "w": 35, "h": 31 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 112.aseprite",
+    "frame": { "x": 2869, "y": 0, "w": 37, "h": 29 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 103, "y": 68, "w": 37, "h": 29 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 113.aseprite",
+    "frame": { "x": 2906, "y": 0, "w": 38, "h": 28 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 106, "y": 69, "w": 38, "h": 28 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 114.aseprite",
+    "frame": { "x": 2944, "y": 0, "w": 36, "h": 27 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 108, "y": 70, "w": 36, "h": 27 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 115.aseprite",
+    "frame": { "x": 2980, "y": 0, "w": 45, "h": 38 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 99, "y": 59, "w": 45, "h": 38 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 116.aseprite",
+    "frame": { "x": 3025, "y": 0, "w": 73, "h": 48 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 76, "y": 49, "w": 73, "h": 48 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 117.aseprite",
+    "frame": { "x": 3098, "y": 0, "w": 68, "h": 46 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 80, "y": 51, "w": 68, "h": 46 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 118.aseprite",
+    "frame": { "x": 3166, "y": 0, "w": 43, "h": 42 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 83, "y": 55, "w": 43, "h": 42 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 119.aseprite",
+    "frame": { "x": 3209, "y": 0, "w": 43, "h": 21 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 83, "y": 76, "w": 43, "h": 21 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 120.aseprite",
+    "frame": { "x": 3252, "y": 0, "w": 41, "h": 20 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 85, "y": 77, "w": 41, "h": 20 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 121.aseprite",
+    "frame": { "x": 3293, "y": 0, "w": 41, "h": 20 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 85, "y": 77, "w": 41, "h": 20 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 122.aseprite",
+    "frame": { "x": 3293, "y": 0, "w": 41, "h": 20 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 85, "y": 77, "w": 41, "h": 20 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 60
+   },
+   {
+    "filename": "red hood itch free 123.aseprite",
+    "frame": { "x": 0, "y": 0, "w": 16, "h": 31 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 104, "y": 66, "w": 16, "h": 31 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 120
+   },
+   {
+    "filename": "red hood itch free 124.aseprite",
+    "frame": { "x": 0, "y": 0, "w": 16, "h": 31 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 104, "y": 66, "w": 16, "h": 31 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 120
+   },
+   {
+    "filename": "red hood itch free 125.aseprite",
+    "frame": { "x": 3334, "y": 0, "w": 21, "h": 30 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 102, "y": 67, "w": 21, "h": 30 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 120
+   },
+   {
+    "filename": "red hood itch free 126.aseprite",
+    "frame": { "x": 3355, "y": 0, "w": 21, "h": 30 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 102, "y": 67, "w": 21, "h": 30 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 120
+   },
+   {
+    "filename": "red hood itch free 127.aseprite",
+    "frame": { "x": 3376, "y": 0, "w": 21, "h": 30 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 102, "y": 67, "w": 21, "h": 30 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 120
+   },
+   {
+    "filename": "red hood itch free 128.aseprite",
+    "frame": { "x": 3397, "y": 0, "w": 21, "h": 28 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 103, "y": 69, "w": 21, "h": 28 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 120
+   },
+   {
+    "filename": "red hood itch free 129.aseprite",
+    "frame": { "x": 3418, "y": 0, "w": 25, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 102, "y": 72, "w": 25, "h": 25 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 120
+   },
+   {
+    "filename": "red hood itch free 130.aseprite",
+    "frame": { "x": 3443, "y": 0, "w": 17, "h": 30 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 102, "y": 67, "w": 17, "h": 30 },
+    "sourceSize": { "w": 211, "h": 133 },
+    "duration": 120
+   }
+ ],
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.2.28-x64",
+  "image": "redhood.png",
+  "format": "I8",
+  "size": { "w": 3460, "h": 48 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "run", "from": 0, "to": 24, "direction": "forward" },
+   { "name": "bow", "from": 25, "to": 33, "direction": "forward" },
+   { "name": "jump", "from": 34, "to": 42, "direction": "forward" },
+   { "name": "fall", "from": 43, "to": 47, "direction": "forward" },
+   { "name": "land", "from": 48, "to": 52, "direction": "forward" },
+   { "name": "die", "from": 53, "to": 56, "direction": "forward" },
+   { "name": "attack1", "from": 57, "to": 62, "direction": "forward" },
+   { "name": "attack2", "from": 63, "to": 68, "direction": "forward" },
+   { "name": "attack3", "from": 69, "to": 80, "direction": "forward" },
+   { "name": "heavy1", "from": 81, "to": 90, "direction": "forward" },
+   { "name": "heavy2", "from": 91, "to": 104, "direction": "forward" },
+   { "name": "heavy3", "from": 105, "to": 122, "direction": "forward" },
+   { "name": "hurt", "from": 123, "to": 130, "direction": "forward" }
+  ],
+  "slices": [
+  ]
+ }
+}
