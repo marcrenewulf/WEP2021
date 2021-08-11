@@ -30,7 +30,8 @@ io.on('connection', function (socket) {
             x: Math.floor(Math.random() * 200) + 50,
             y: Math.floor(Math.random() * 80) + 50,
             playerId: socket.id,
-            username: loginData.username
+            username: loginData.username,
+            healthPoints: 100
         };
         // send the players object to the new player
         console.log(players);
@@ -65,6 +66,12 @@ io.on('connection', function (socket) {
     socket.on('playerAnimation', function (animationData) {
        players[socket.id].animation = animationData.animation;
        socket.broadcast.emit('playerNewAnimation', players[socket.id]);
+    });
+
+    socket.on('playerHitted', function (hitData){
+        //in hitData is the playerID and the healthpoints
+        players[hitData.playerId].healthPoints = hitData.healthPoints;
+        socket.broadcast.emit('playerHealthUpdate', players[hitData.playerId]);
     });
 
 });
