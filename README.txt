@@ -23,12 +23,20 @@ Schritt2: Installation der Frameworks
 	// Express ist ein Web-Framework, das grundlegende Webanwendungsfunktionen bereitstellt
 	2. npm install express
 
+	alternativ 
+
+	npm install
+
 Schritt3: Bringen wir das ganze ins rollen
 
 	Zum Schluss wollen wir den Server starten und natürlich auf das Spiel lokal zugreifen.
 	Um den Server zu starten:
 
 	node server.js
+
+	alternativ 
+
+	npm start
 
 	in die Shell eingeben, das Fenster "muss" offen bleiben.
 
