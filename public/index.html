@@ -23,7 +23,7 @@
             <nav>
                 <div class="clearfix">
                     <div class="float-start">LOGO</div>
-                    <button type="button" class="btn btn-primary float-end" onclick="showDialog();">SignIn</button>
+                    <button type="button" class="btn btn-primary float-end" onclick="showDialog();" id="loginButton">SignIn</button>
                 </div>
             </nav>
             <h1>WEP 2021</h1>
@@ -116,7 +116,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" onclick="closeDialog();">Close</button>
-                            <button type="button" onclick="logIn()" class="btn btn-primary" id="doLoginButton">Sign In!</button>
+                            <button type="button" onclick="logIn()" class="btn btn-primary" id="doLoginButton">Lets Go!</button>
                         </div>
                     </div>
                 </div>               
@@ -147,9 +147,11 @@
             page2.show();
         }
 
-        function logIn(){            
+        function logIn(){
+            var loginButton = $('#loginButton');      
             var username = $('#loginName').val();
             var canvasDiv = $('#canvasDiv');
+            loginButton.hide();
             canvasDiv.show();
             socket.emit('loggedIn', {username : username});
             closeDialog();
