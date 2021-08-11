@@ -1,8 +1,7 @@
 class Character extends Phaser.GameObjects.Sprite {
     constructor(scene, playerInfo, sprite) {
         super(scene, playerInfo.x, playerInfo.y, sprite);
-        this.username = playerInfo.username;
-        scene.add.text(playerInfo.x, playerInfo.y - 20, this.username, { font: '"Press Start 2P"' });
+        this.username = scene.add.text(playerInfo.x, playerInfo.y - 25, playerInfo.username, { font: '"Press Start 2P"' });
         scene.add.existing(this);
         scene.physics.add.existing(this);
         this.dmgHitbox = new DmgHitbox(scene, this);

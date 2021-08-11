@@ -4,11 +4,11 @@ class Healthbar {
     {
         this.bar = new Phaser.GameObjects.Graphics(scene);
 
-        this.x = x;
+        this.x = x-13;
         this.y = y-20;
         this.health = value;
         this.value = value;
-        this.p = 0.2;
+        this.p = 0.05;
 
         this.draw();
 
@@ -16,19 +16,19 @@ class Healthbar {
     }
 
     updatePosition(x, y){
-        this.x = x;
+        this.x = x-13;
         this.y = y-20;
         this.draw()
     }
 
     delete(){
-        console.log("löschen")
         this.bar.destroy();
         super.delete();
     }
 
     updateHealth (health)
     {
+
         this.value = health;
 
         if (this.value < 0)
