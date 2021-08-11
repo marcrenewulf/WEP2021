@@ -35,8 +35,7 @@ class Scene1 extends Phaser.Scene {
         //Physics Group for Other Players
         this.otherPlayers = this.physics.add.group();
 
-        //Hitbox Events
-        this.physics.add.overlap(this.player.dmgHitbox, this.otherPlayers, this.emitPlayerDmg, null, this);
+        
 
         //Aktuelle Spieler und sich selbst hinzufügen
         socket.on('currentPlayers', function (players) {
@@ -49,6 +48,10 @@ class Scene1 extends Phaser.Scene {
                     self.player.on("animationstart", function (anim) {
                         self.emitNewPlayerAnimation(anim)
                     });
+
+                    //Hitbox Events
+                    self.physics.add.overlap(self.player.dmgHitbox, self.otherPlayers, self.emitPlayerDmg, null, self);
+
                 } else {
                     self.addOtherPlayers(self, players[id]);
                 }
@@ -66,6 +69,7 @@ class Scene1 extends Phaser.Scene {
                 if (playerInfo.playerId === otherPlayer.playerId) {
                     otherPlayer.setPosition(playerInfo.x, playerInfo.y);
                     otherPlayer.setFlipX(playerInfo.direction === -1);
+                    otherPlayer.healthbar.updatePosition(playerInfo.x, playerInfo.y);
                 }
             });
         });
@@ -77,6 +81,19 @@ class Scene1 extends Phaser.Scene {
                     otherPlayer.play(playerInfo.animation);
                 }
             });
+        });
+
+        //Lebensdaten aktualisieren
+        socket.on('playerHealthUpdate', function (playerInfo) {
+            if (playerInfo.playerId === socket.id){
+                self.player.healthbar.updateHealth(playerInfo.healthPoints);
+            } else {
+                self.otherPlayers.getChildren().forEach(function (otherPlayer) {
+                    if (playerInfo.playerId === otherPlayer.playerId) {
+                        otherPlayer.healthbar.updateHealth(playerInfo.healthPoints);
+                    }
+                });
+            }
         })
 
         socket.on('disconnected', function (playerId) {
@@ -98,7 +115,7 @@ class Scene1 extends Phaser.Scene {
         if (this.player) {
             this.player.doAction();
             this.playerControl();
-            this.emitPlayerMovement();
+            this.checkPlayerMovement();
         }
     }
 
@@ -136,13 +153,15 @@ class Scene1 extends Phaser.Scene {
         self.otherPlayers.add(otherPlayer);
         otherPlayer.body.allowGravity = false;
         otherPlayer.body.setSize(otherPlayer.frame.width, otherPlayer.frame.height);
+        otherPlayer.healthbar = new Healthbar(self, playerInfo.x, playerInfo.y, playerInfo.healthPoints);
     }
 
-    emitPlayerMovement() {
+    checkPlayerMovement() {
         var x = this.player.x;
         var y = Math.round(this.player.y);
 
         if (this.player.oldPosition && (x !== this.player.oldPosition.x || y !== this.player.oldPosition.y)) {
+            this.player.healthbar.updatePosition(x, y);
             socket.emit('playerMovement', {x: this.player.x, y: this.player.y, direction: this.player.direction});
         }
 

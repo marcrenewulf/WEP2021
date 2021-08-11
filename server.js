@@ -31,7 +31,7 @@ io.on('connection', function (socket) {
             y: Math.floor(Math.random() * 80) + 50,
             playerId: socket.id,
             username: loginData.username,
-            healthPoints: 100
+            healthPoints: 500
         };
         // send the players object to the new player
         console.log(players);
@@ -69,11 +69,16 @@ io.on('connection', function (socket) {
     });
 
     socket.on('playerHitted', function (hitData){
+        console.log(hitData.playerId + " / " + hitData.damage);
         //in hitData is the playerID and the healthpoints
-        players[hitData.playerId].healthPoints = players[hitData.playerId] - hitData.demage;
+        players[hitData.playerId].healthPoints -= hitData.damage;
         console.log(players[hitData.playerId]);
-        //next step
-        //socket.broadcast.emit('playerHealthUpdate', players[hitData.playerId]);
+        if(players[hitData.playerId].healthPoints > 0){
+            socket.broadcast.emit('playerHealthUpdate', players[hitData.playerId]);
+        }else{
+            socket.broadcast.emit('playerDied', players[hitData.playerId]);
+        }
+        
     });
 
 });
