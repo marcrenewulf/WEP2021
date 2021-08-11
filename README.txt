@@ -12,9 +12,8 @@ Schritt1: Installation der benötigten Umgebungen & Anwendungen
 	
 Schritt2: Installation der Frameworks
 
-	Als Nächstes brauchst Du eine Shell deiner Wahl z.B. Powershell,
-	navigier in der Shell zu dem Pfad an dem der entpackte Order liegt.
-	Der Pfad sollte nun mit "\WEP2021" enden.
+	Als Nächstes brauchst Du eine Shell Deiner Wahl z.B. Powershell,
+	navigier in der Shell zu dem Pfad an dem der entpackte Order liegt und wechsel in den Order WEP2021.
 
 	Um die Frameworks zu installieren brauchst Du folgende Befehle.
 	Diese einen nach dem anderen ausführen:
@@ -29,7 +28,7 @@ Schritt3: Bringen wir das ganze ins rollen
 	Zum Schluss wollen wir den Server starten und natürlich auf das Spiel lokal zugreifen.
 	Um den Server zu starten:
 
-	npm server.js
+	node server.js
 
 	in die Shell eingeben, das Fenster "muss" offen bleiben.
 
