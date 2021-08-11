@@ -49,3 +49,13 @@ p {
 label {
     padding-right: 20px;
 }
+
+.colHeader {
+    margin-bottom: 10px;
+    font-weight: bold;
+    align-self: flex-end;
+}
+
+.champName {
+    font-size: 20px;
+}
