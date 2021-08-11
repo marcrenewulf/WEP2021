@@ -75,8 +75,10 @@ io.on('connection', function (socket) {
         console.log(players[hitData.playerId]);
         if(players[hitData.playerId].healthPoints > 0){
             socket.broadcast.emit('playerHealthUpdate', players[hitData.playerId]);
+            socket.emit('playerHealthUpdate', players[hitData.playerId]);
         }else{
             socket.broadcast.emit('playerDied', players[hitData.playerId]);
+            socket.emit('playerDied', players[hitData.playerId]);
         }
         
     });
