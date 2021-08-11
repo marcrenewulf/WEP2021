@@ -97,18 +97,22 @@ class Scene1 extends Phaser.Scene {
         })
 
         //Wenn ein Spieler gekillt wird/wurde
-        // socket.on('playerDied', function (player) {
-        //     console.log("playerDied" + player.playerId);
-        //     if (player.playerId === socket.id){
-        //         self.player.destroy();
-        //     } else {
-        //         self.otherPlayers.getChildren().forEach(function (otherPlayer) {
-        //             if (player.playerId === otherPlayer.playerId) {
-        //                 otherPlayer.destroy();
-        //             }
-        //         });
-        //     }
-        // })
+        socket.on('playerDied', function (player) {
+            console.log("playerDied" + player.playerId);
+            if (player.playerId === socket.id){
+                //Zeige lobby oder andere Scene oder was auch immer.. 
+                //Jetzt erstamal übergangsweise ein Page-Reload Button
+                $("#canvasDiv").hide();
+                $("#deadScreen").show();
+            } else {
+                self.otherPlayers.getChildren().forEach(function (otherPlayer) {
+                    if (player.playerId === otherPlayer.playerId) {
+                        otherPlayer.destroy();
+                        //otherPlayer.healthbar.destroy();   klappt nicht :(
+                    }
+                });
+            }
+        })
 
         socket.on('disconnected', function (playerId) {
             self.otherPlayers.getChildren().forEach(function (otherPlayer) {

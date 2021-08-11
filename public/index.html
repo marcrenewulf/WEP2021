@@ -30,7 +30,14 @@
         </header>
         <main>
 
-            <div id="canvasDiv"style="display:none;"></div>
+            <div id="canvasDiv" style="display:none;"></div>
+            <div id="deadScreen" style="display:none; text-align: center;">
+                <h2 style="color:red;">You are dead!</h2>
+                <div onclick="location.reload();"  style="cursor: pointer;">
+                    <img style="height: 100px; width:100px;" src="img/reload.png" /><br />
+                    Reload page
+                </div>
+            </div>
             <!-- <div id="loby" style="display:block;background-color:green;">
                 <h2>LOBBY</h2>
                 <table class="table">
