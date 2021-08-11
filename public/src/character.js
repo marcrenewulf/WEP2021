@@ -6,7 +6,7 @@ class Character extends Phaser.GameObjects.Sprite {
         scene.add.existing(this);
         scene.physics.add.existing(this);
         this.dmgHitbox = new DmgHitbox(scene, this);
-        this.healthbar = new Healthbar(scene, this.x, this.y, 100);
+        this.healthbar = new Healthbar(scene, this.x, this.y, 500);
         this.body.setSize(this.frame.width, this.frame.height);
         this.normalSize = {
             x : this.frame.width,

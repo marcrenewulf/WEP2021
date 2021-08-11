@@ -31,7 +31,7 @@ io.on('connection', function (socket) {
             y: Math.floor(Math.random() * 80) + 50,
             playerId: socket.id,
             username: loginData.username,
-            healthPoints: 100
+            healthPoints: 500
         };
         // send the players object to the new player
         console.log(players);
