@@ -96,6 +96,20 @@ class Scene1 extends Phaser.Scene {
             }
         })
 
+        //Wenn ein Spieler gekillt wird/wurde
+        // socket.on('playerDied', function (player) {
+        //     console.log("playerDied" + player.playerId);
+        //     if (player.playerId === socket.id){
+        //         self.player.destroy();
+        //     } else {
+        //         self.otherPlayers.getChildren().forEach(function (otherPlayer) {
+        //             if (player.playerId === otherPlayer.playerId) {
+        //                 otherPlayer.destroy();
+        //             }
+        //         });
+        //     }
+        // })
+
         socket.on('disconnected', function (playerId) {
             self.otherPlayers.getChildren().forEach(function (otherPlayer) {
                 if (playerId === otherPlayer.playerId) {
