@@ -21,7 +21,7 @@
             <nav>
                 <div class="clearfix">
                     <div class="float-start">LOGO</div>
-                    <button type="button" class="btn btn-primary float-end" id="loginDialogButton">SignIn</button>
+                    <button type="button" class="btn btn-primary float-end" onclick="showDialog();">SignIn</button>
                 </div>
             </nav>
             <h1>WEP 2021</h1>
@@ -53,8 +53,8 @@
             </div> -->
 
             <dialog id="dialog">
-                    <div class="modal-dialog" role="document">
-                            <div class="modal-content">
+                    <div id="page1" class="modal-dialog" role="document">
+                        <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title">Sign in</h5>
                             </div>
@@ -65,11 +65,28 @@
                                 </p>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" id="closeLoginButton">Close</button>
-                                <button type="button" onclick="logIn();" class="btn btn-primary" id="doLoginButton">Sign In!</button>
+                                <button type="button" class="btn btn-secondary" onclick="closeDialog();">Close</button>
+                                <button type="button" onclick="next();" class="btn btn-primary">Continue</button>
                             </div>
                         </div>
                     </div>
+                    <div id="page2" style="display:none" class="modal-dialog" role="document">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Characterauswahl</h5>
+                        </div>
+                        <div class="modal-body">
+                            <p>                
+                                <label for="loginName">Username:</label>
+                                <input type="text" id="loginName" name="loginName">
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" onclick="closeDialog();">Close</button>
+                            <button type="button" onclick="logIn()" class="btn btn-primary" id="doLoginButton">Sign In!</button>
+                        </div>
+                    </div>
+                </div>               
             </dialog>
         </main>
         <footer>
@@ -77,15 +94,6 @@
         </footer>
     </body>
     <script>
-        var loginDialogButton = document.getElementById('loginDialogButton');
-        var doLoginButton = document.getElementById('doLoginButton');
-        var closeLoginButton = document.getElementById('closeLoginButton');
-        var dialog = document.getElementById('dialog');
-
-        loginDialogButton.addEventListener('click', showDialog);
-        doLoginButton.addEventListener('click', closeDialog);
-        closeLoginButton.addEventListener('click', closeDialog);
-
         function showDialog() {
             dialog.showModal();
         }
@@ -94,11 +102,19 @@
             dialog.close();
         }
 
-        function logIn(){
-            var canvasDiv = $('#canvasDiv');
+        function next() {
+            var page1 = $('#page1');
+            var page2 = $('#page2');
+            page1.hide();
+            page2.show();
+        }
+
+        function logIn(){            
             var username = $('#loginName').val();
-            socket.emit('loggedIn', {username : username});
+            var canvasDiv = $('#canvasDiv');
             canvasDiv.show();
+            socket.emit('loggedIn', {username : username});
+            closeDialog();
         }
     </script>
 </html>
