@@ -71,7 +71,9 @@ io.on('connection', function (socket) {
     socket.on('playerHitted', function (hitData){
         //in hitData is the playerID and the healthpoints
         players[hitData.playerId].healthPoints = players[hitData.playerId] - hitData.demage;
-        socket.broadcast.emit('playerHealthUpdate', players[hitData.playerId]);
+        console.log(players[hitData.playerId]);
+        //next step
+        //socket.broadcast.emit('playerHealthUpdate', players[hitData.playerId]);
     });
 
 });
