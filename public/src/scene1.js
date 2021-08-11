@@ -121,6 +121,8 @@ class Scene1 extends Phaser.Scene {
         socket.on('disconnected', function (playerId) {
             self.otherPlayers.getChildren().forEach(function (otherPlayer) {
                 if (playerId === otherPlayer.playerId) {
+                    otherPlayer.healthbar.bar.destroy();
+                    otherPlayer.username.destroy();
                     otherPlayer.destroy();
                 }
             });
