@@ -1,3 +1,4 @@
+//Hier ist noch nix fertig, gibt erstmal nur einen Charakter
 class Reaper extends Character {
     constructor(scene, playerInfo){
         super(scene, playerInfo, "reaper");

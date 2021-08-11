@@ -32,7 +32,7 @@ class Hero extends Character {
 
     doAction() {
         super.doAction();
-        if (!this.actionsBlocked) {
+        if (!this.actionsBlocked && !this.dead) {
             switch (this.nextAction) {
                 case "attack" :
                     this.attack();
