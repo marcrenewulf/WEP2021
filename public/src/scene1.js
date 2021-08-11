@@ -102,8 +102,10 @@ class Scene1 extends Phaser.Scene {
             if (player.playerId === socket.id){
                 //Zeige lobby oder andere Scene oder was auch immer.. 
                 //Jetzt erstamal übergangsweise ein Page-Reload Button
-                $("#canvasDiv").hide();
-                $("#deadScreen").show();
+                self.player.die();
+                $("#canvasDiv").fadeOut(7000).after(
+                    $("#deadScreen").show()
+                );
             } else {
                 self.otherPlayers.getChildren().forEach(function (otherPlayer) {
                     if (player.playerId === otherPlayer.playerId) {

@@ -20,16 +20,22 @@ class Character extends Phaser.GameObjects.Sprite {
         this.actionsBlocked = false;
 
         this.nextAction = "";
+
+        this.on("animationcomplete", function (anim) {
+            this.emit("animationcomplete_" + anim.key);
+        });
     }
 
     move(direction) {
-        if (!this.actionsBlocked){
-            this.setFlipX(-1 === direction);
-            this.direction = direction;
-        }
-        this.body.setVelocityX(this.aktSpeed * direction);
-        if (!this.actionsBlocked && this.body.onFloor()) {
-            this.play(this.char+"_run", true);
+        if (!this.dead) {
+            if (!this.actionsBlocked){
+                this.setFlipX(-1 === direction);
+                this.direction = direction;
+            }
+            this.body.setVelocityX(this.aktSpeed * direction);
+            if (!this.actionsBlocked && this.body.onFloor()) {
+                this.play(this.char+"_run", true);
+            }
         }
     }
 
@@ -44,7 +50,7 @@ class Character extends Phaser.GameObjects.Sprite {
     }
 
     jump() {
-        if (!this.actionsBlocked && this.jumpsLeft > 0) {
+        if (!this.actionsBlocked && this.jumpsLeft > 0 && !this.dead) {
             this.jumpsLeft--;
             this.body.setVelocityY(-this.jumpHight);
             this.play(this.char + "_jump" + this.jumpsLeft, true);
@@ -52,7 +58,7 @@ class Character extends Phaser.GameObjects.Sprite {
     }
 
     playIdle() {
-        if (!this.anims.isPlaying) {
+        if (!this.anims.isPlaying && !this.dead) {
             if (this.body.onFloor()) {
                this.play(this.char + "_idle", true);
             } else {
@@ -69,6 +75,11 @@ class Character extends Phaser.GameObjects.Sprite {
         if (this.body.onFloor()) {
             this.jumpsLeft = this.jumpsMax;
         }
+    }
+
+    die() {
+        this.play(this.char + "_die");
+        this.dead = true;
     }
 
 }

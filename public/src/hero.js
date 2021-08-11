@@ -5,9 +5,7 @@ class Hero extends Character {
         this.aktSpeed = this.speed;
         this.attackCounter = 0;
 
-        this.on("animationcomplete", function (anim) {
-            this.emit("animationcomplete_" + anim.key);
-        });
+
         this.on("animationcomplete_hero_attack1", this.attackEnded, this);
         this.on("animationcomplete_hero_attack2", this.attackEnded, this);
         this.on("animationcomplete_hero_attack3", this.attackEnded, this);
