@@ -26,14 +26,17 @@ class Scene1 extends Phaser.Scene {
         this.platforms = map.createLayer('Platforms', tileset);
         this.platforms.setCollisionByProperty({collide: true});
 
-        //Physics Group for Other Players
-        this.otherPlayers = this.physics.add.group();
-
         //keyboard
         this.cursors = this.input.keyboard.createCursorKeys();
         this.jump = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
         this.attackAbility = this.input.keyboard.addKey("Q");
         this.movementAbility = this.input.keyboard.addKey("w");
+
+        //Physics Group for Other Players
+        this.otherPlayers = this.physics.add.group();
+
+        //Hitbox Events
+        this.physics.add.overlap(this.player.dmgHitbox, this.otherPlayers, this.emitPlayerDmg, null, this);
 
         //Aktuelle Spieler und sich selbst hinzufügen
         socket.on('currentPlayers', function (players) {
@@ -151,6 +154,12 @@ class Scene1 extends Phaser.Scene {
 
     emitNewPlayerAnimation(anim) {
         socket.emit('playerAnimation', {animation: anim});
+    }
+
+    emitPlayerDmg(hitbox, otherPlayer) {
+        if (hitbox.active) {
+            socket.emit('playerHitted', {playerId: otherPlayer.playerId, damage: hitbox.dmg});
+        }
     }
 
     moveClouds() {

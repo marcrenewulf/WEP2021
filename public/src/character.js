@@ -5,6 +5,7 @@ class Character extends Phaser.GameObjects.Sprite {
         scene.add.text(playerInfo.x, playerInfo.y - 20, this.username, { font: '"Press Start 2P"' });
         scene.add.existing(this);
         scene.physics.add.existing(this);
+        this.dmgHitbox = new DmgHitbox(scene, this);
         this.body.setSize(this.frame.width, this.frame.height);
         this.normalSize = {
             x : this.frame.width,

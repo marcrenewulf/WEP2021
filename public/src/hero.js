@@ -13,6 +13,23 @@ class Hero extends Character {
         this.on("animationcomplete_hero_attack3", this.attackEnded, this);
         this.on("animationcomplete_hero_jump0", this.attackEnded, this);
 
+        this.on('animationupdate', function (anim, frame){
+            if (["hero_attack1", "hero_attack2", "hero_attack3"].includes(anim.key)){
+                this.placeDmgHitbox();
+                if (anim.key === "hero_attack3") {
+                    this.dmgHitbox.dmg += 1.2;
+                }
+                if (frame.index === 2) {
+                    this.dmgHitbox.active = true;
+                } else if (anim.key === "hero_attack1" && frame.index === 5) {
+                    this.dmgHitbox.active = false;
+                    this.dmgHitbox.resetDmg();
+                } else {
+                    this.dmgHitbox.active = false;
+                    this.dmgHitbox.resetDmg();
+                }
+            }
+        });
     }
 
     doAction() {
@@ -56,5 +73,13 @@ class Hero extends Character {
         this.actionsBlocked = false;
         this.aktSpeed = this.speed;
         this.body.setSize(this.normalSize.x, this.normalSize.y);
+    }
+
+    placeDmgHitbox() {
+        if (this.flipX) {
+            this.dmgHitbox.body.reset(this.body.center.x - 11, this.body.center.y);
+        } else {
+            this.dmgHitbox.body.reset(this.body.center.x + 11, this.body.center.y);
+        }
     }
 }
