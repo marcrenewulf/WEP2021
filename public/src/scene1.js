@@ -69,6 +69,7 @@ class Scene1 extends Phaser.Scene {
                 if (playerInfo.playerId === otherPlayer.playerId) {
                     otherPlayer.setPosition(playerInfo.x, playerInfo.y);
                     otherPlayer.setFlipX(playerInfo.direction === -1);
+                    otherPlayer.healthbar.updatePosition(playerInfo.x, playerInfo.y);
                 }
             });
         });
@@ -114,7 +115,7 @@ class Scene1 extends Phaser.Scene {
         if (this.player) {
             this.player.doAction();
             this.playerControl();
-            this.emitPlayerMovement();
+            this.checkPlayerMovement();
         }
     }
 
@@ -152,13 +153,15 @@ class Scene1 extends Phaser.Scene {
         self.otherPlayers.add(otherPlayer);
         otherPlayer.body.allowGravity = false;
         otherPlayer.body.setSize(otherPlayer.frame.width, otherPlayer.frame.height);
+        otherPlayer.healthbar = new Healthbar(self, playerInfo.x, playerInfo.y, playerInfo.healthPoints);
     }
 
-    emitPlayerMovement() {
+    checkPlayerMovement() {
         var x = this.player.x;
         var y = Math.round(this.player.y);
 
         if (this.player.oldPosition && (x !== this.player.oldPosition.x || y !== this.player.oldPosition.y)) {
+            this.player.healthbar.updatePosition(x, y);
             socket.emit('playerMovement', {x: this.player.x, y: this.player.y, direction: this.player.direction});
         }
 

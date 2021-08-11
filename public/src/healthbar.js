@@ -5,10 +5,10 @@ class Healthbar {
         this.bar = new Phaser.GameObjects.Graphics(scene);
 
         this.x = x;
-        this.y = y;
+        this.y = y-20;
         this.health = value;
         this.value = value;
-        this.p = 0.06;
+        this.p = 0.2;
 
         this.draw();
 
@@ -17,7 +17,7 @@ class Healthbar {
 
     updatePosition(x, y){
         this.x = x;
-        this.y = y;
+        this.y = y-20;
         this.draw()
     }
 
@@ -47,12 +47,12 @@ class Healthbar {
 
         // BG
         this.bar.fillStyle(0x0c0000);
-        this.bar.fillRect(this.x, this.y, this.health * this.p + 2, 4);
+        this.bar.fillRect(this.x, this.y, this.health * this.p + 2, 6);
 
         //  Health
 
         this.bar.fillStyle(0x0c1122);
-        this.bar.fillRect(this.x + 1, this.y + 1, this.health * this.p, 2);
+        this.bar.fillRect(this.x + 1, this.y + 1, this.health * this.p, 4);
 
         if (this.value < 30)
         {
