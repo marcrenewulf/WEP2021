@@ -35,8 +35,7 @@ class Scene1 extends Phaser.Scene {
         //Physics Group for Other Players
         this.otherPlayers = this.physics.add.group();
 
-        //Hitbox Events
-        this.physics.add.overlap(this.player.dmgHitbox, this.otherPlayers, this.emitPlayerDmg, null, this);
+        
 
         //Aktuelle Spieler und sich selbst hinzufügen
         socket.on('currentPlayers', function (players) {
@@ -49,6 +48,10 @@ class Scene1 extends Phaser.Scene {
                     self.player.on("animationstart", function (anim) {
                         self.emitNewPlayerAnimation(anim)
                     });
+
+                    //Hitbox Events
+                    self.physics.add.overlap(self.player.dmgHitbox, self.otherPlayers, self.emitPlayerDmg, null, self);
+
                 } else {
                     self.addOtherPlayers(self, players[id]);
                 }
