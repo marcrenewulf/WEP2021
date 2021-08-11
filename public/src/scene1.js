@@ -162,6 +162,8 @@ class Scene1 extends Phaser.Scene {
 
         if (this.player.oldPosition && (x !== this.player.oldPosition.x || y !== this.player.oldPosition.y)) {
             this.player.healthbar.updatePosition(x, y);
+            this.player.username.setX(x-13);
+            this.player.username.setY(y-32);
             socket.emit('playerMovement', {x: this.player.x, y: this.player.y, direction: this.player.direction});
         }
 
