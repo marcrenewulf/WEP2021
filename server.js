@@ -73,7 +73,12 @@ io.on('connection', function (socket) {
         //in hitData is the playerID and the healthpoints
         players[hitData.playerId].healthPoints -= hitData.damage;
         console.log(players[hitData.playerId]);
-        socket.broadcast.emit('playerHealthUpdate', players[hitData.playerId]);
+        if(players[hitData.playerId].healthPoints > 0){
+            socket.broadcast.emit('playerHealthUpdate', players[hitData.playerId]);
+        }else{
+            socket.broadcast.emit('playerDied', players[hitData.playerId]);
+        }
+        
     });
 
 });
