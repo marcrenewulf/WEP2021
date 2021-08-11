@@ -1,9 +1,25 @@
 {
-    "name": "WEP 2021 Nielsen Wulf Schule",
-    "version": "0.0.1",
-    "description": "my first socket.io app",
-    "dependencies": {
-        "express": "^4.17.1",
-        "socket.io": "^4.1.3"
-    }
+  "name": "wep2021-nielsen-wulf-schulte",
+  "version": "1.0.0",
+  "description": "my first socket.io app",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^4.1.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcrenewulf/WEP2021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcrenewulf/WEP2021/issues"
+  },
+  "homepage": "https://github.com/marcrenewulf/WEP2021#readme"
 }
