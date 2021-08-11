@@ -77,6 +77,19 @@ class Scene1 extends Phaser.Scene {
                     otherPlayer.play(playerInfo.animation);
                 }
             });
+        });
+
+        //Lebensdaten aktualisieren
+        socket.on('playerHealthUpdate', function (playerInfo) {
+            if (playerInfo.playerId === socket.id){
+                self.player.healthbar.updateHealth(playerInfo.healthPoints);
+            } else {
+                self.otherPlayers.getChildren().forEach(function (otherPlayer) {
+                    if (playerInfo.playerId === otherPlayer.playerId) {
+                        otherPlayer.healthbar.updateHealth(playerInfo.healthPoints);
+                    }
+                });
+            }
         })
 
         socket.on('disconnected', function (playerId) {
