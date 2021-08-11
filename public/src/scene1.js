@@ -109,8 +109,8 @@ class Scene1 extends Phaser.Scene {
             } else {
                 self.otherPlayers.getChildren().forEach(function (otherPlayer) {
                     if (player.playerId === otherPlayer.playerId) {
+                        otherPlayer.healthbar.bar.destroy();
                         otherPlayer.destroy();
-                        //otherPlayer.healthbar.destroy();   klappt nicht :(
                     }
                 });
             }
