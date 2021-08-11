@@ -5,7 +5,7 @@ class DmgHitbox extends Phaser.GameObjects.Sprite {
         this.debugShowBody = true;
         this.setOrigin(0.5, 0.5);
         this.active = false;
-        this.origdmg = 40;
+        this.origdmg = 10;
         this.dmg = this.origdmg;
 
         scene.add.existing(this);

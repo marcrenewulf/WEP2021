@@ -70,6 +70,8 @@ class Scene1 extends Phaser.Scene {
                     otherPlayer.setPosition(playerInfo.x, playerInfo.y);
                     otherPlayer.setFlipX(playerInfo.direction === -1);
                     otherPlayer.healthbar.updatePosition(playerInfo.x, playerInfo.y);
+                    otherPlayer.username.setX(playerInfo.x-13);
+                    otherPlayer.username.setY(playerInfo.y-32);
                 }
             });
         });
@@ -103,13 +105,13 @@ class Scene1 extends Phaser.Scene {
                 //Zeige lobby oder andere Scene oder was auch immer.. 
                 //Jetzt erstamal übergangsweise ein Page-Reload Button
                 self.player.die();
-                $("#canvasDiv").fadeOut(7000).after(
-                    $("#deadScreen").show()
-                );
+                //$("#canvasDiv").fadeOut(7000)
+                $("#deadScreen").fadeIn(1000);
             } else {
                 self.otherPlayers.getChildren().forEach(function (otherPlayer) {
                     if (player.playerId === otherPlayer.playerId) {
                         otherPlayer.healthbar.bar.destroy();
+                        otherPlayer.username.destroy();
                         otherPlayer.destroy();
                     }
                 });
@@ -174,6 +176,7 @@ class Scene1 extends Phaser.Scene {
         otherPlayer.body.allowGravity = false;
         otherPlayer.body.setSize(otherPlayer.frame.width, otherPlayer.frame.height);
         otherPlayer.healthbar = new Healthbar(self, playerInfo.x, playerInfo.y, playerInfo.healthPoints);
+        otherPlayer.username = self.add.text(playerInfo.x, playerInfo.y - 25, playerInfo.username, { font: '"Press Start 2P"' ,  color : "black"});
     }
 
     checkPlayerMovement() {
