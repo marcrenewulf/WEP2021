@@ -56,29 +56,39 @@ io.on('connection', function (socket) {
 
     // when a player moves, update the player data
     socket.on('playerMovement', function (movementData) {
-        players[socket.id].x = movementData.x;
-        players[socket.id].y = movementData.y;
-        players[socket.id].direction = movementData.direction;
-        // emit a message to all players about the player that moved
-        socket.broadcast.emit('playerMoved', players[socket.id]);
+        if(players[socket.id]){
+            players[socket.id].x = movementData.x;
+            players[socket.id].y = movementData.y;
+            players[socket.id].direction = movementData.direction;
+            // emit a message to all players about the player that moved
+            socket.broadcast.emit('playerMoved', players[socket.id]);
+        }
     });
 
     socket.on('playerAnimation', function (animationData) {
-       players[socket.id].animation = animationData.animation;
-       socket.broadcast.emit('playerNewAnimation', players[socket.id]);
+        if(players[socket.id]){
+            players[socket.id].animation = animationData.animation;
+            socket.broadcast.emit('playerNewAnimation', players[socket.id]);
+        }
     });
 
     socket.on('playerHitted', function (hitData){
-        console.log(hitData.playerId + " / " + hitData.damage);
-        //in hitData is the playerID and the healthpoints
-        players[hitData.playerId].healthPoints -= hitData.damage;
-        console.log(players[hitData.playerId]);
-        if(players[hitData.playerId].healthPoints > 0){
-            socket.broadcast.emit('playerHealthUpdate', players[hitData.playerId]);
-            socket.emit('playerHealthUpdate', players[hitData.playerId]);
-        }else{
-            socket.broadcast.emit('playerDied', players[hitData.playerId]);
-            socket.emit('playerDied', players[hitData.playerId]);
+        //Check ob hitData.playerId is in list
+        if(players[socket.id]){
+            console.log(hitData.playerId + " / " + hitData.damage);
+            //in hitData is the playerID and the healthpoints
+            players[hitData.playerId].healthPoints -= hitData.damage;
+            //console.log(players[hitData.playerId]);
+            if(players[hitData.playerId].healthPoints > 0){
+                socket.broadcast.emit('playerHealthUpdate', players[hitData.playerId]);
+                socket.emit('playerHealthUpdate', players[hitData.playerId]);
+            }else{
+                socket.broadcast.emit('playerDied', players[hitData.playerId]);
+                socket.emit('playerDied', players[hitData.playerId]);
+                delete players[hitData.playerId];
+                console.log("player dead");
+                console.log(players);
+            }
         }
         
     });
