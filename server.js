@@ -3,28 +3,16 @@ var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var port = 8000;
-
 var players = {};
 
-
-
 app.use(express.static(__dirname + "/public"));
-
 
 io.on('connection', function (socket) {
     console.log('a user connected');
 
-    
-
-
-
-
     socket.on('loggedIn', function(loginData){
         console.log('a user logged in');
         // create a new player and add it to our players object
-
-        console.log(loginData.username);
-
         players[socket.id] = {
             direction: 1,
             x: Math.floor(Math.random() * 200) + 50,
@@ -34,17 +22,11 @@ io.on('connection', function (socket) {
             healthPoints: 500
         };
         // send the players object to the new player
-        console.log(players);
         socket.emit('currentPlayers', players);
         
         // update all other players of the new player
         socket.broadcast.emit('newPlayer', players[socket.id]);
     });
-
-
-
-
-
 
     socket.on('disconnect', function () {
         console.log('user disconnected');
@@ -73,12 +55,12 @@ io.on('connection', function (socket) {
     });
 
     socket.on('playerHitted', function (hitData){
-        //Check ob hitData.playerId is in list
+        //Check if socket.id is in list
         if(players[socket.id]){
-            console.log(hitData.playerId + " / " + hitData.damage);
+
             //in hitData is the playerID and the healthpoints
             players[hitData.playerId].healthPoints -= hitData.damage;
-            //console.log(players[hitData.playerId]);
+
             if(players[hitData.playerId].healthPoints > 0){
                 socket.broadcast.emit('playerHealthUpdate', players[hitData.playerId]);
                 socket.emit('playerHealthUpdate', players[hitData.playerId]);
@@ -90,11 +72,8 @@ io.on('connection', function (socket) {
                 console.log(players);
             }
         }
-        
     });
-
 });
-
 
 http.listen(port, function () {
     console.log('Server gestartet, er lauscht auf dem Port ' + port);
