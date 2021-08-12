@@ -56,7 +56,7 @@ io.on('connection', function (socket) {
 
     socket.on('playerHitted', function (hitData){
         //Check if socket.id is in list
-        if(players[socket.id]){
+        if(players[hitData.playerId]){
 
             //in hitData is the playerID and the healthpoints
             players[hitData.playerId].healthPoints -= hitData.damage;
