@@ -17,7 +17,8 @@ class Preload extends Phaser.Scene {
         this.load.image("c7","./img/background/cloud7.png");
         this.load.image("c8","./img/background/cloud8.png");
 
-        this.load.image("dirt", "./img/platform/DirtTiles16.png");
+        this.dirt = this.load.image("dirt", "./img/platform/DirtTiles16.png");
+
         this.load.tilemapTiledJSON("dirtmap","./img/platform/dirtmap.json");
 
         //aseprite datein

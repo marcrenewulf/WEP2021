@@ -7,6 +7,7 @@ class DmgHitbox extends Phaser.GameObjects.Sprite {
         this.active = false;
         this.origdmg = 10;
         this.dmg = this.origdmg;
+        this.deactivateFor = [];
 
         scene.add.existing(this);
         scene.physics.add.existing(this);

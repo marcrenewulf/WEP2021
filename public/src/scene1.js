@@ -1,6 +1,8 @@
 class Scene1 extends Phaser.Scene {
     static LINKS = -1;
     static RECHTS = 1;
+    static ACTION_DASH = 'dash';
+    static ACTION_ATTACK = 'attack';
 
     constructor() {
         super("startGame");
@@ -8,9 +10,9 @@ class Scene1 extends Phaser.Scene {
 
     create() {
         //hintergrund
-        this.add.tileSprite(0, 0, config.width, config.height, "b1").setOrigin(0, 0);
-        this.add.tileSprite(0, 0, config.width, config.height, "b2").setOrigin(0, 0);
-        this.add.tileSprite(0, 0, config.width, config.height, "b3").setOrigin(0, 0);
+        this.b1 = this.add.tileSprite(0, 0, config.width, config.height, "b1").setOrigin(0, 0);
+        this.b2 = this.add.tileSprite(0, 0, config.width, config.height, "b2").setOrigin(0, 0);
+        this.b3 = this.add.tileSprite(0, 0, config.width, config.height, "b3").setOrigin(0, 0);
         this.c1 = this.add.tileSprite(0, 0, config.width, config.height, "c1").setOrigin(0, 0);
         this.c2 = this.add.tileSprite(0, 0, config.width, config.height, "c2").setOrigin(0, 0);
         this.c3 = this.add.tileSprite(0, 0, config.width, config.height, "c3").setOrigin(0, 0);
@@ -19,6 +21,12 @@ class Scene1 extends Phaser.Scene {
         this.c6 = this.add.tileSprite(0, 0, config.width, config.height, "c6").setOrigin(0, 0);
         this.c7 = this.add.tileSprite(0, 0, config.width, config.height, "c7").setOrigin(0, 0);
         this.c8 = this.add.tileSprite(0, 0, config.width, config.height, "c8").setOrigin(0, 0);
+
+        //Auf die Größe des Canves zoomen
+        Align.scaleToGameW(this.b1, 1);
+        Align.scaleToGameW(this.b2, 1);
+        Align.scaleToGameW(this.b3, 1);
+
 
         //platformen
         const map = this.make.tilemap({key: 'dirtmap'});
@@ -34,7 +42,6 @@ class Scene1 extends Phaser.Scene {
 
         //Physics Group for Other Players
         this.otherPlayers = this.physics.add.group();
-
         
 
         //Aktuelle Spieler und sich selbst hinzufügen
@@ -42,7 +49,7 @@ class Scene1 extends Phaser.Scene {
             console.log("current Player ()");
             Object.keys(players).forEach(function (id) {
                 if (players[id].playerId === socket.id) {
-                    self.player = new Hero(self, players[id]);
+                    self.player = new Reaper(self, players[id]);
                     self.physics.add.collider(self.player, self.platforms);
 
                     self.player.on("animationstart", function (anim) {
@@ -87,6 +94,7 @@ class Scene1 extends Phaser.Scene {
 
         //Lebensdaten aktualisieren
         socket.on('playerHealthUpdate', function (playerInfo) {
+            console.log(playerInfo.healthPoints);
             if (playerInfo.playerId === socket.id){
                 self.player.healthbar.updateHealth(playerInfo.healthPoints);
             } else {
@@ -204,7 +212,10 @@ class Scene1 extends Phaser.Scene {
 
     emitPlayerDmg(hitbox, otherPlayer) {
         if (hitbox.active) {
-            socket.emit('playerHitted', {playerId: otherPlayer.playerId, damage: hitbox.dmg});
+            if (!hitbox.deactivateFor.includes(otherPlayer.playerId)) {
+                socket.emit('playerHitted', {playerId: otherPlayer.playerId, damage: hitbox.dmg});
+                hitbox.deactivateFor.push(otherPlayer.playerId);
+            }
         }
     }
 

@@ -44,13 +44,14 @@ class Hero extends Character {
                     super.playIdle();
                     break;
             }
-            this.nextAction = "";
+        this.nextAction = "";
         }
     }
 
     attack() {
         this.attackCounter++;
         this.play("hero_attack" + this.attackCounter, true);
+        this.dmgHitbox.deactivateFor = [];
         if (this.attackCounter === 3) {
             this.attackCounter = 0;
         }
